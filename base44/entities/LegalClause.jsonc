@@ -1,0 +1,86 @@
+{
+  "name": "LegalClause",
+  "type": "object",
+  "properties": {
+    "clause_code": {
+      "type": "string",
+      "description": "M\u00e3 \u0111i\u1ec1u kho\u1ea3n, VD: LC-ND105-ART14-KH2"
+    },
+    "doc_id": {
+      "type": "string",
+      "description": "FK \u2192 LegalDocument.id"
+    },
+    "doc_code": {
+      "type": "string",
+      "description": "M\u00e3 v\u0103n b\u1ea3n (denormalized \u0111\u1ec3 query nhanh)"
+    },
+    "article_number": {
+      "type": "string",
+      "description": "\u0110i\u1ec1u, VD: \u0110i\u1ec1u 14"
+    },
+    "clause_number": {
+      "type": "string",
+      "description": "Kho\u1ea3n, VD: Kho\u1ea3n 2"
+    },
+    "point": {
+      "type": "string",
+      "description": "\u0110i\u1ec3m, VD: \u0110i\u1ec3m a"
+    },
+    "clause_title": {
+      "type": "string",
+      "description": "Ti\u00eau \u0111\u1ec1 \u0111i\u1ec1u kho\u1ea3n"
+    },
+    "clause_content": {
+      "type": "string",
+      "description": "N\u1ed9i dung \u0111\u1ea7y \u0111\u1ee7 \u0111i\u1ec1u kho\u1ea3n"
+    },
+    "obligation_type": {
+      "type": "string",
+      "enum": [
+        "MANDATORY",
+        "CONDITIONAL",
+        "RECOMMENDED"
+      ],
+      "default": "MANDATORY"
+    },
+    "obligation_summary": {
+      "type": "string",
+      "description": "T\u00f3m t\u1eaft ngh\u0129a v\u1ee5 b\u1eb1ng ng\u00f4n ng\u1eef \u0111\u01a1n gi\u1ea3n"
+    },
+    "frequency": {
+      "type": "string",
+      "description": "T\u1ea7n su\u1ea5t b\u1eaft bu\u1ed9c, VD: 6 th\u00e1ng/l\u1ea7n"
+    },
+    "evidence_required": {
+      "type": "string",
+      "description": "Lo\u1ea1i h\u1ed3 s\u01a1/b\u1eb1ng ch\u1ee9ng c\u1ea7n l\u01b0u"
+    },
+    "penalty_reference": {
+      "type": "string",
+      "description": "Tham chi\u1ebfu \u0111i\u1ec1u kho\u1ea3n x\u1eed ph\u1ea1t"
+    },
+    "applicable_to": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "\u0110\u1ed1i t\u01b0\u1ee3ng \u00e1p d\u1ee5ng"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "T\u1eeb kh\u00f3a t\u00ecm ki\u1ebfm"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 1000
+    }
+  },
+  "required": [
+    "doc_id",
+    "article_number",
+    "clause_content"
+  ]
+}

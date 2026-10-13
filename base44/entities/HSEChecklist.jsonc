@@ -1,0 +1,141 @@
+{
+  "name": "HSEChecklist",
+  "type": "object",
+  "properties": {
+    "checklist_code": {
+      "type": "string",
+      "description": "M\u00e3 checklist, VD: CL-FIRE-MONTHLY-01"
+    },
+    "category_code": {
+      "type": "string",
+      "description": "M\u00e3 h\u1ea1ng m\u1ee5c HSE"
+    },
+    "name": {
+      "type": "string"
+    },
+    "name_vi": {
+      "type": "string"
+    },
+    "frequency": {
+      "type": "string",
+      "enum": [
+        "DAILY",
+        "WEEKLY",
+        "MONTHLY",
+        "QUARTERLY",
+        "ANNUALLY",
+        "BEFORE_WORK",
+        "AFTER_INCIDENT"
+      ],
+      "default": "MONTHLY"
+    },
+    "applicable_areas": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "legal_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "doc_code": {
+            "type": "string"
+          },
+          "clause_code": {
+            "type": "string"
+          },
+          "article_number": {
+            "type": "string"
+          },
+          "relevance": {
+            "type": "string",
+            "enum": [
+              "DIRECTLY_REQUIRED",
+              "SUPPORTING",
+              "REFERENCE"
+            ]
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "item_id": {
+            "type": "string"
+          },
+          "section": {
+            "type": "string",
+            "description": "Nh\u00f3m c\u00e2u h\u1ecfi"
+          },
+          "question": {
+            "type": "string"
+          },
+          "question_vi": {
+            "type": "string"
+          },
+          "answer_type": {
+            "type": "string",
+            "enum": [
+              "YES_NO",
+              "PASS_FAIL",
+              "NUMERIC",
+              "TEXT",
+              "PHOTO_REQUIRED"
+            ],
+            "default": "PASS_FAIL"
+          },
+          "expected_answer": {
+            "type": "string"
+          },
+          "is_critical": {
+            "type": "boolean",
+            "default": false
+          },
+          "legal_refs": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "consequence_if_fail": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "auto_create_capa_if_fail": {
+      "type": "boolean",
+      "default": true
+    },
+    "sop_code": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ACTIVE",
+        "DRAFT",
+        "OBSOLETE"
+      ],
+      "default": "ACTIVE"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 1000
+    }
+  },
+  "required": [
+    "checklist_code",
+    "name",
+    "category_code",
+    "frequency"
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "name": "AIConfig",
+  "type": "object",
+  "properties": {
+    "key": {
+      "type": "string",
+      "description": "config key (singleton: 'global')"
+    },
+    "mode": {
+      "type": "string",
+      "enum": [
+        "passive",
+        "proactive"
+      ],
+      "default": "proactive"
+    },
+    "enabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "auto_create_actions": {
+      "type": "boolean",
+      "default": true
+    },
+    "auto_create_alerts": {
+      "type": "boolean",
+      "default": true
+    },
+    "auto_suggest_sop": {
+      "type": "boolean",
+      "default": true
+    },
+    "overdue_threshold": {
+      "type": "number",
+      "default": 3
+    },
+    "incident_spike_threshold": {
+      "type": "number",
+      "default": 3
+    },
+    "pattern_window_days": {
+      "type": "number",
+      "default": 30
+    },
+    "last_scan_date": {
+      "type": "string"
+    },
+    "provider": {
+      "type": "string",
+      "default": "base44"
+    },
+    "model": {
+      "type": "string",
+      "default": "automatic"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 1000
+    }
+  },
+  "required": [
+    "key"
+  ]
+}

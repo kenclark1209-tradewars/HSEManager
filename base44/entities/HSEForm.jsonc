@@ -1,0 +1,137 @@
+{
+  "name": "HSEForm",
+  "type": "object",
+  "properties": {
+    "form_code": {
+      "type": "string",
+      "description": "M\u00e3 bi\u1ec3u m\u1eabu, VD: BM-PCCC-01"
+    },
+    "category_code": {
+      "type": "string",
+      "description": "M\u00e3 h\u1ea1ng m\u1ee5c HSE"
+    },
+    "form_name": {
+      "type": "string"
+    },
+    "form_name_en": {
+      "type": "string"
+    },
+    "law_form_reference": {
+      "type": "string",
+      "description": "N\u1ebfu l\u00e0 m\u1eabu quy \u0111\u1ecbnh b\u1edfi lu\u1eadt, VD: M\u1eabu PC02 theo N\u0110 105/2025"
+    },
+    "legal_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "doc_code": {
+            "type": "string"
+          },
+          "clause_code": {
+            "type": "string"
+          },
+          "article_number": {
+            "type": "string"
+          },
+          "relevance": {
+            "type": "string",
+            "enum": [
+              "DIRECTLY_REQUIRED",
+              "SUPPORTING",
+              "REFERENCE"
+            ]
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "version": {
+      "type": "string",
+      "default": "1.0"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ACTIVE",
+        "OBSOLETE",
+        "DRAFT"
+      ],
+      "default": "ACTIVE"
+    },
+    "frequency_of_use": {
+      "type": "string",
+      "enum": [
+        "EACH_EVENT",
+        "DAILY",
+        "WEEKLY",
+        "MONTHLY",
+        "QUARTERLY",
+        "ANNUALLY"
+      ],
+      "default": "EACH_EVENT"
+    },
+    "fields": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "field_id": {
+            "type": "string"
+          },
+          "field_name": {
+            "type": "string"
+          },
+          "field_name_vi": {
+            "type": "string"
+          },
+          "field_type": {
+            "type": "string"
+          },
+          "is_mandatory": {
+            "type": "boolean"
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "legal_refs": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "help_text": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "sop_code": {
+      "type": "string",
+      "description": "FK \u2192 SOP.sop_code"
+    },
+    "retention_period_years": {
+      "type": "number",
+      "description": "S\u1ed1 n\u0103m l\u01b0u h\u1ed3 s\u01a1 theo lu\u1eadt"
+    },
+    "retention_legal_ref": {
+      "type": "object",
+      "description": "\u0110i\u1ec1u kho\u1ea3n quy \u0111\u1ecbnh th\u1eddi h\u1ea1n l\u01b0u"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 1000
+    }
+  },
+  "required": [
+    "form_code",
+    "form_name",
+    "category_code",
+    "status"
+  ]
+}

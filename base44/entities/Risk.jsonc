@@ -1,0 +1,84 @@
+{
+  "name": "Risk",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "T\u00ean r\u1ee7i ro"
+    },
+    "description": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "safety",
+        "health",
+        "environmental",
+        "fire",
+        "chemical",
+        "ergonomic",
+        "other"
+      ],
+      "default": "safety"
+    },
+    "likelihood": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5,
+      "default": 3
+    },
+    "impact": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5,
+      "default": 3
+    },
+    "risk_score": {
+      "type": "number"
+    },
+    "risk_level": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "extreme"
+      ],
+      "default": "medium"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "identified",
+        "assessed",
+        "mitigated",
+        "closed"
+      ],
+      "default": "identified"
+    },
+    "location": {
+      "type": "string"
+    },
+    "mitigation_plan": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "linked_regulation_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "review_date": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "title",
+    "category"
+  ]
+}

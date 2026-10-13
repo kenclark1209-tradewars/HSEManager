@@ -1,0 +1,57 @@
+{
+  "name": "AuditLog",
+  "type": "object",
+  "properties": {
+    "action_type": {
+      "type": "string",
+      "enum": ["create", "update", "delete", "approve", "reject", "execute", "login", "export", "ai_action"],
+      "description": "Loại hành động"
+    },
+    "module": {
+      "type": "string",
+      "enum": ["incident", "action", "risk", "sop", "regulation", "compliance", "inspection", "budget", "ai_queue", "knowledge", "user", "settings"],
+      "description": "Module bị tác động"
+    },
+    "entity_id": {
+      "type": "string",
+      "description": "ID đối tượng bị tác động"
+    },
+    "entity_name": {
+      "type": "string",
+      "description": "Tên/tiêu đề đối tượng"
+    },
+    "performed_by": {
+      "type": "string",
+      "description": "Email người thực hiện"
+    },
+    "description": {
+      "type": "string",
+      "description": "Mô tả chi tiết hành động"
+    },
+    "old_value": {
+      "type": "object",
+      "description": "Giá trị cũ (trước khi thay đổi)"
+    },
+    "new_value": {
+      "type": "object",
+      "description": "Giá trị mới (sau khi thay đổi)"
+    },
+    "ip_address": {
+      "type": "string"
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["info", "warning", "critical"],
+      "default": "info"
+    },
+    "is_ai_action": {
+      "type": "boolean",
+      "default": false
+    },
+    "ai_tool_name": {
+      "type": "string",
+      "description": "Tên AI tool nếu là hành động AI"
+    }
+  },
+  "required": ["action_type", "module", "performed_by"]
+}

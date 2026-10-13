@@ -1,0 +1,85 @@
+{
+  "name": "Training",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Tên khóa đào tạo"
+    },
+    "description": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": ["safety_induction", "fire_safety", "first_aid", "chemical_handling", "ppe_usage", "emergency_response", "iso_45001", "environmental", "other"],
+      "default": "other"
+    },
+    "training_type": {
+      "type": "string",
+      "enum": ["classroom", "online", "on_the_job", "drill", "refresher"],
+      "default": "classroom"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["planned", "in_progress", "completed", "cancelled"],
+      "default": "planned"
+    },
+    "trainer": {
+      "type": "string",
+      "description": "Người/tổ chức đào tạo"
+    },
+    "department": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "planned_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "actual_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "duration_hours": {
+      "type": "number",
+      "default": 8
+    },
+    "max_participants": {
+      "type": "number"
+    },
+    "actual_participants": {
+      "type": "number",
+      "default": 0
+    },
+    "pass_score": {
+      "type": "number",
+      "default": 70,
+      "description": "Điểm đạt yêu cầu (%)"
+    },
+    "linked_regulation_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "linked_sop_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "certificate_validity_months": {
+      "type": "number",
+      "default": 12,
+      "description": "Thời hạn chứng chỉ (tháng)"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "cost": {
+      "type": "number"
+    },
+    "materials_url": {
+      "type": "string"
+    }
+  },
+  "required": ["title", "category", "status"]
+}

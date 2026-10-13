@@ -1,0 +1,142 @@
+{
+  "name": "SOP",
+  "type": "object",
+  "properties": {
+    "sop_code": {
+      "type": "string",
+      "description": "M\u00e3 SOP, VD: SOP-FIRE-001"
+    },
+    "category_code": {
+      "type": "string",
+      "description": "M\u00e3 h\u1ea1ng m\u1ee5c HSE"
+    },
+    "title": {
+      "type": "string"
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "string",
+      "description": "Ph\u1ea1m vi \u00e1p d\u1ee5ng"
+    },
+    "version": {
+      "type": "string",
+      "default": "1.0"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "DRAFT",
+        "UNDER_REVIEW",
+        "APPROVED",
+        "OBSOLETE"
+      ],
+      "default": "DRAFT"
+    },
+    "approved_by": {
+      "type": "string"
+    },
+    "approved_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "next_review_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "legal_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "doc_code": {
+            "type": "string"
+          },
+          "clause_code": {
+            "type": "string"
+          },
+          "article_number": {
+            "type": "string"
+          },
+          "relevance": {
+            "type": "string",
+            "enum": [
+              "DIRECTLY_REQUIRED",
+              "SUPPORTING",
+              "REFERENCE"
+            ]
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "C\u0103n c\u1ee9 ph\u00e1p l\u00fd c\u1ee7a SOP"
+    },
+    "law_version_snapshot": {
+      "type": "object",
+      "description": "Phi\u00ean b\u1ea3n lu\u1eadt t\u1ea1i th\u1eddi \u0111i\u1ec3m ph\u00ea duy\u1ec7t"
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "step_id": {
+            "type": "string"
+          },
+          "step_number": {
+            "type": "number"
+          },
+          "step_title": {
+            "type": "string"
+          },
+          "instruction": {
+            "type": "string"
+          },
+          "responsible_role": {
+            "type": "string"
+          },
+          "legal_refs": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "warning": {
+            "type": "string"
+          },
+          "evidence_required": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "related_forms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "related_checklists": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ai_generated": {
+      "type": "boolean",
+      "default": false
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 1000
+    }
+  },
+  "required": [
+    "sop_code",
+    "title",
+    "status"
+  ]
+}

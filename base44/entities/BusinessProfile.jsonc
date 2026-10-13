@@ -1,0 +1,43 @@
+{
+  "name": "BusinessProfile",
+  "type": "object",
+  "properties": {
+    "key": {
+      "type": "string",
+      "description": "Kh\u00f3a \u0111\u1ecbnh danh (singleton: 'global')"
+    },
+    "industry": {
+      "type": "string",
+      "enum": [
+        "manufacturing",
+        "construction",
+        "services_logistics",
+        "chemicals"
+      ],
+      "description": "Ng\u00e0nh ngh\u1ec1"
+    },
+    "company_size": {
+      "type": "string",
+      "enum": [
+        "lt50",
+        "50_300",
+        "gt300"
+      ],
+      "description": "Quy m\u00f4 lao \u0111\u1ed9ng"
+    },
+    "factors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "C\u00e1c y\u1ebfu t\u1ed1 \u0111\u1eb7c th\u00f9"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 1000
+    }
+  },
+  "required": [
+    "key"
+  ]
+}

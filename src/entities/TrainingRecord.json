@@ -1,0 +1,53 @@
+{
+  "name": "TrainingRecord",
+  "type": "object",
+  "properties": {
+    "training_id": {
+      "type": "string",
+      "description": "ID khóa đào tạo"
+    },
+    "training_title": {
+      "type": "string"
+    },
+    "participant_name": {
+      "type": "string"
+    },
+    "participant_email": {
+      "type": "string"
+    },
+    "department": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    },
+    "attendance_status": {
+      "type": "string",
+      "enum": ["attended", "absent", "partial"],
+      "default": "attended"
+    },
+    "score": {
+      "type": "number",
+      "description": "Điểm đánh giá (%)"
+    },
+    "passed": {
+      "type": "boolean",
+      "default": false
+    },
+    "certificate_issued": {
+      "type": "boolean",
+      "default": false
+    },
+    "certificate_number": {
+      "type": "string"
+    },
+    "certificate_expiry": {
+      "type": "string",
+      "format": "date"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": ["training_id", "participant_name"]
+}

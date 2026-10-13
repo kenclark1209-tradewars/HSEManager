@@ -1,0 +1,84 @@
+{
+  "name": "Report",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "report_type": {
+      "type": "string",
+      "enum": [
+        "regulatory",
+        "periodic_monthly",
+        "periodic_quarterly",
+        "periodic_annual",
+        "ad_hoc"
+      ],
+      "default": "periodic_monthly"
+    },
+    "period_from": {
+      "type": "string",
+      "format": "date"
+    },
+    "period_to": {
+      "type": "string",
+      "format": "date"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "review",
+        "approved",
+        "submitted"
+      ],
+      "default": "draft"
+    },
+    "prepared_by": {
+      "type": "string"
+    },
+    "approved_by": {
+      "type": "string"
+    },
+    "submitted_to": {
+      "type": "string"
+    },
+    "submitted_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "total_incidents": {
+      "type": "number",
+      "default": 0
+    },
+    "total_lti": {
+      "type": "number",
+      "default": 0
+    },
+    "total_near_miss": {
+      "type": "number",
+      "default": 0
+    },
+    "total_actions_open": {
+      "type": "number",
+      "default": 0
+    },
+    "total_actions_closed": {
+      "type": "number",
+      "default": 0
+    },
+    "file_url": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "report_type"
+  ]
+}

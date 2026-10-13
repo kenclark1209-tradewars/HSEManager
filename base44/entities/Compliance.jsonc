@@ -1,0 +1,60 @@
+{
+  "name": "Compliance",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "regulation_id": {
+      "type": "string"
+    },
+    "regulation_code": {
+      "type": "string"
+    },
+    "requirement": {
+      "type": "string",
+      "description": "Y\u00eau c\u1ea7u tu\u00e2n th\u1ee7 c\u1ee5 th\u1ec3"
+    },
+    "compliance_status": {
+      "type": "string",
+      "enum": [
+        "compliant",
+        "partial",
+        "non_compliant",
+        "not_applicable"
+      ],
+      "default": "partial"
+    },
+    "deadline": {
+      "type": "string",
+      "format": "date"
+    },
+    "responsible_person": {
+      "type": "string"
+    },
+    "evidence": {
+      "type": "string"
+    },
+    "gap_description": {
+      "type": "string"
+    },
+    "action_plan": {
+      "type": "string"
+    },
+    "last_review_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "next_review_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "compliance_status"
+  ]
+}

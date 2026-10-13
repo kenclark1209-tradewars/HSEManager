@@ -1,0 +1,40 @@
+{
+  "name": "Checklist",
+  "type": "object",
+  "properties": {
+    "title": { "type": "string" },
+    "description": { "type": "string" },
+    "category": {
+      "type": "string",
+      "enum": ["safety", "health", "environmental", "fire", "chemical", "equipment", "general"],
+      "default": "general"
+    },
+    "hse_category_id": { "type": "string" },
+    "linked_action_id": { "type": "string" },
+    "linked_inspection_id": { "type": "string" },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "text": { "type": "string" },
+          "checked": { "type": "boolean", "default": false },
+          "note": { "type": "string" },
+          "required": { "type": "boolean", "default": false }
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "active", "completed", "archived"],
+      "default": "draft"
+    },
+    "assigned_to": { "type": "string" },
+    "due_date": { "type": "string", "format": "date" },
+    "completed_date": { "type": "string", "format": "date" },
+    "ai_generated": { "type": "boolean", "default": false },
+    "completion_percent": { "type": "number", "default": 0 }
+  },
+  "required": ["title"]
+}

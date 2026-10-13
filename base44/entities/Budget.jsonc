@@ -1,0 +1,76 @@
+{
+  "name": "Budget",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "year": {
+      "type": "number"
+    },
+    "quarter": {
+      "type": "number"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "training",
+        "ppe",
+        "equipment",
+        "inspection",
+        "emergency",
+        "environmental",
+        "other"
+      ],
+      "default": "other"
+    },
+    "budget_type": {
+      "type": "string",
+      "enum": [
+        "planned",
+        "actual"
+      ],
+      "default": "planned"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "currency": {
+      "type": "string",
+      "default": "VND"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "approved",
+        "spent",
+        "cancelled"
+      ],
+      "default": "draft"
+    },
+    "description": {
+      "type": "string"
+    },
+    "approved_by": {
+      "type": "string"
+    },
+    "hse_plan_id": {
+      "type": "string"
+    },
+    "vendor": {
+      "type": "string"
+    },
+    "invoice_number": {
+      "type": "string"
+    },
+    "payment_date": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "title",
+    "amount"
+  ]
+}

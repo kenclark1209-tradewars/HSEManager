@@ -1,0 +1,45 @@
+{
+  "name": "Regulation",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string",
+      "description": "M\u00e3 quy \u0111\u1ecbnh (VD: ISO 45001:2018)"
+    },
+    "description": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "iso",
+        "local_law",
+        "internal",
+        "industry_standard"
+      ],
+      "default": "iso"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "archived"
+      ],
+      "default": "active"
+    },
+    "effective_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "document_url": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "code"
+  ]
+}

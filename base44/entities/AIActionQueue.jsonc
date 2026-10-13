@@ -1,0 +1,88 @@
+{
+  "name": "AIActionQueue",
+  "type": "object",
+  "properties": {
+    "action_id": {
+      "type": "string",
+      "description": "ID \u0111\u1ecbnh danh h\u00e0nh \u0111\u1ed9ng (auto-generated)"
+    },
+    "tool_name": {
+      "type": "string",
+      "description": "T\u00ean tool AI mu\u1ed1n th\u1ef1c thi"
+    },
+    "display_name": {
+      "type": "string",
+      "description": "T\u00ean hi\u1ec3n th\u1ecb c\u1ee7a tool"
+    },
+    "input_data": {
+      "type": "object",
+      "description": "D\u1eef li\u1ec7u \u0111\u1ea7u v\u00e0o \u0111\u00e3 validated"
+    },
+    "proposed_output": {
+      "type": "object",
+      "description": "K\u1ebft qu\u1ea3 AI \u0111\u1ec1 xu\u1ea5t (n\u1ebfu c\u00f3)"
+    },
+    "ai_reasoning": {
+      "type": "string",
+      "description": "Gi\u1ea3i th\u00edch t\u1ea1i sao AI \u0111\u1ec1 xu\u1ea5t h\u00e0nh \u0111\u1ed9ng n\u00e0y"
+    },
+    "automation_level": {
+      "type": "string",
+      "enum": [
+        "FULL_AUTO",
+        "NEEDS_REVIEW",
+        "NEEDS_APPROVAL"
+      ],
+      "default": "NEEDS_REVIEW"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PENDING",
+        "APPROVED",
+        "REJECTED",
+        "EXECUTED",
+        "FAILED"
+      ],
+      "default": "PENDING"
+    },
+    "requested_by": {
+      "type": "string",
+      "description": "AI_SYSTEM ho\u1eb7c user_id"
+    },
+    "reviewed_by": {
+      "type": "string",
+      "description": "user_id ng\u01b0\u1eddi duy\u1ec7t"
+    },
+    "review_note": {
+      "type": "string",
+      "description": "Ghi ch\u00fa c\u1ee7a ng\u01b0\u1eddi duy\u1ec7t"
+    },
+    "reviewed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "executed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "context_data": {
+      "type": "object",
+      "description": "D\u1eef li\u1ec7u ng\u1eef c\u1ea3nh b\u1ed5 sung"
+    },
+    "required_role": {
+      "type": "string",
+      "description": "Role c\u1ea7n thi\u1ebft \u0111\u1ec3 duy\u1ec7t: hse_officer ho\u1eb7c manager"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 1000
+    }
+  },
+  "required": [
+    "tool_name",
+    "automation_level",
+    "status",
+    "requested_by"
+  ]
+}

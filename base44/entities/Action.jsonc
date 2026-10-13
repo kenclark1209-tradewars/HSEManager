@@ -1,0 +1,96 @@
+{
+  "name": "Action",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Ti\u00eau \u0111\u1ec1 h\u00e0nh \u0111\u1ed9ng"
+    },
+    "description": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "corrective",
+        "preventive",
+        "improvement"
+      ],
+      "default": "corrective"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "open",
+        "assigned",
+        "in_progress",
+        "pending_evidence",
+        "pending_approval",
+        "completed",
+        "effectiveness_monitoring",
+        "closed"
+      ],
+      "default": "open"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ],
+      "default": "medium"
+    },
+    "assigned_to": {
+      "type": "string"
+    },
+    "due_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "linked_incident_id": {
+      "type": "string"
+    },
+    "linked_risk_id": {
+      "type": "string"
+    },
+    "linked_inspection_id": {
+      "type": "string",
+      "description": "FK \u2192 Inspection.id (CAPA ph\u00e1t sinh t\u1eeb ki\u1ec3m tra)"
+    },
+    "verification_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Ng\u00e0y \u0111\u00e1nh gi\u00e1 hi\u1ec7u qu\u1ea3"
+    },
+    "verified_by": {
+      "type": "string",
+      "description": "Ng\u01b0\u1eddi \u0111\u00e1nh gi\u00e1 hi\u1ec7u qu\u1ea3"
+    },
+    "verification_result": {
+      "type": "string",
+      "enum": [
+        "passed",
+        "failed"
+      ],
+      "description": "K\u1ebft lu\u1eadn hi\u1ec7u qu\u1ea3: \u0110\u1ea1t / Ch\u01b0a \u0111\u1ea1t"
+    },
+    "evidence_count": {
+      "type": "number",
+      "default": 0
+    },
+    "completed_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "closed_by": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "type",
+    "status"
+  ]
+}

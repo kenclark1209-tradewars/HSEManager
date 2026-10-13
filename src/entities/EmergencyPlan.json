@@ -1,0 +1,104 @@
+{
+  "name": "EmergencyPlan",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Tên kế hoạch ứng phó"
+    },
+    "emergency_type": {
+      "type": "string",
+      "enum": ["fire", "chemical_spill", "medical_emergency", "natural_disaster", "explosion", "evacuation", "power_failure", "cyber_incident", "other"],
+      "default": "fire"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "approved", "active", "archived"],
+      "default": "draft"
+    },
+    "severity_level": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "critical"],
+      "default": "high"
+    },
+    "description": {
+      "type": "string",
+      "description": "Mô tả tình huống khẩn cấp"
+    },
+    "trigger_conditions": {
+      "type": "string",
+      "description": "Điều kiện kích hoạt kế hoạch"
+    },
+    "immediate_actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "step": { "type": "number" },
+          "action": { "type": "string" },
+          "responsible": { "type": "string" },
+          "time_limit_minutes": { "type": "number" }
+        }
+      },
+      "description": "Các bước hành động tức thì"
+    },
+    "evacuation_routes": {
+      "type": "string"
+    },
+    "assembly_points": {
+      "type": "string"
+    },
+    "emergency_contacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "role": { "type": "string" },
+          "name": { "type": "string" },
+          "phone": { "type": "string" }
+        }
+      }
+    },
+    "resources_required": {
+      "type": "string",
+      "description": "Thiết bị/nguồn lực cần thiết"
+    },
+    "communication_plan": {
+      "type": "string"
+    },
+    "recovery_steps": {
+      "type": "string",
+      "description": "Các bước phục hồi sau sự cố"
+    },
+    "linked_regulation_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "last_drill_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "next_drill_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "approved_by": {
+      "type": "string"
+    },
+    "approved_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "review_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "location": {
+      "type": "string"
+    },
+    "department": {
+      "type": "string"
+    }
+  },
+  "required": ["title", "emergency_type", "status"]
+}

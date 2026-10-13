@@ -1,0 +1,33 @@
+{
+  "name": "PDCARecord",
+  "type": "object",
+  "properties": {
+    "hse_category_id": { "type": "string", "description": "Liên kết hạng mục HSE" },
+    "hse_category_name": { "type": "string" },
+    "phase": {
+      "type": "string",
+      "enum": ["plan", "do", "check", "act"],
+      "description": "Giai đoạn PDCA"
+    },
+    "title": { "type": "string" },
+    "description": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "in_progress", "completed", "reviewed"],
+      "default": "draft"
+    },
+    "objectives": { "type": "string", "description": "Mục tiêu SMART" },
+    "targets": { "type": "string", "description": "Chỉ tiêu đo lường" },
+    "responsible_person": { "type": "string" },
+    "due_date": { "type": "string", "format": "date" },
+    "completion_percent": { "type": "number", "default": 0 },
+    "linked_regulation_ids": { "type": "array", "items": { "type": "string" } },
+    "linked_action_ids": { "type": "array", "items": { "type": "string" } },
+    "linked_sop_ids": { "type": "array", "items": { "type": "string" }, "description": "FK → SOP" },
+    "linked_checklist_ids": { "type": "array", "items": { "type": "string" }, "description": "FK → HSEChecklist" },
+    "linked_risk_ids": { "type": "array", "items": { "type": "string" } },
+    "ai_generated": { "type": "boolean", "default": false },
+    "notes": { "type": "string" }
+  },
+  "required": ["hse_category_id", "phase", "title"]
+}

@@ -1,0 +1,94 @@
+{
+  "name": "LegalAlert",
+  "type": "object",
+  "properties": {
+    "alert_type": {
+      "type": "string",
+      "enum": [
+        "NEW_LAW",
+        "LAW_REPLACED",
+        "EXPIRING_SOON",
+        "OBSOLETE_REF",
+        "PENDING_UPDATE"
+      ],
+      "default": "NEW_LAW"
+    },
+    "doc_code_new": {
+      "type": "string",
+      "description": "V\u0103n b\u1ea3n m\u1edbi"
+    },
+    "doc_code_replaced": {
+      "type": "string",
+      "description": "V\u0103n b\u1ea3n b\u1ecb thay th\u1ebf"
+    },
+    "change_summary": {
+      "type": "string",
+      "description": "T\u00f3m t\u1eaft thay \u0111\u1ed5i"
+    },
+    "affected_categories": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "urgency": {
+      "type": "string",
+      "enum": [
+        "IMMEDIATE",
+        "30_DAYS",
+        "90_DAYS"
+      ],
+      "default": "30_DAYS"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ACTIVE",
+        "ACKNOWLEDGED",
+        "RESOLVED"
+      ],
+      "default": "ACTIVE"
+    },
+    "acknowledged_by": {
+      "type": "string"
+    },
+    "resolved_by": {
+      "type": "string"
+    },
+    "affected_sop_codes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "affected_form_codes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "affected_checklist_codes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "official_url": {
+      "type": "string"
+    },
+    "action_required": {
+      "type": "string",
+      "description": "H\u00e0nh \u0111\u1ed9ng c\u1ea7n th\u1ef1c hi\u1ec7n"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 1000
+    }
+  },
+  "required": [
+    "alert_type",
+    "change_summary",
+    "urgency",
+    "status"
+  ]
+}

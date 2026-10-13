@@ -1,0 +1,103 @@
+{
+  "name": "LegalDocument",
+  "type": "object",
+  "properties": {
+    "doc_code": {
+      "type": "string",
+      "description": "M\u00e3 v\u0103n b\u1ea3n duy nh\u1ea5t, VD: ND-105-2025"
+    },
+    "doc_type": {
+      "type": "string",
+      "enum": [
+        "LUAT",
+        "NGHI_DINH",
+        "THONG_TU",
+        "QUYET_DINH",
+        "QCVN",
+        "TCVN",
+        "TIEU_CHUAN_QT"
+      ],
+      "default": "NGHI_DINH"
+    },
+    "doc_number": {
+      "type": "string",
+      "description": "S\u1ed1 hi\u1ec7u v\u0103n b\u1ea3n, VD: 105/2025/N\u0110-CP"
+    },
+    "doc_name": {
+      "type": "string",
+      "description": "T\u00ean \u0111\u1ea7y \u0111\u1ee7 v\u0103n b\u1ea3n ph\u00e1p lu\u1eadt"
+    },
+    "issuing_body": {
+      "type": "string",
+      "description": "C\u01a1 quan ban h\u00e0nh"
+    },
+    "issued_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "effective_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "expiry_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Ng\u00e0y h\u1ebft hi\u1ec7u l\u1ef1c (n\u1ebfu c\u00f3)"
+    },
+    "replaces_docs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "C\u00e1c v\u0103n b\u1ea3n b\u1ecb thay th\u1ebf"
+    },
+    "replaced_by_doc": {
+      "type": "string",
+      "description": "V\u0103n b\u1ea3n thay th\u1ebf (n\u1ebfu \u0111\u00e3 h\u1ebft hi\u1ec7u l\u1ef1c)"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "HIEU_LUC",
+        "HET_HIEU_LUC",
+        "CHUA_CO_HIEU_LUC",
+        "TAM_DINH_CHI"
+      ],
+      "default": "HIEU_LUC"
+    },
+    "official_url": {
+      "type": "string",
+      "description": "Link v\u0103n b\u1ea3n g\u1ed1c"
+    },
+    "summary": {
+      "type": "string",
+      "description": "T\u00f3m t\u1eaft n\u1ed9i dung ch\u00ednh"
+    },
+    "applicable_categories": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "M\u00e3 h\u1ea1ng m\u1ee5c HSE \u00e1p d\u1ee5ng"
+    },
+    "country": {
+      "type": "string",
+      "enum": [
+        "VN",
+        "INTERNATIONAL"
+      ],
+      "default": "VN"
+    },
+    "is_mandatory": {
+      "type": "boolean",
+      "default": true,
+      "description": "B\u1eaft bu\u1ed9c \u00e1p d\u1ee5ng hay ch\u1ec9 tham chi\u1ebfu"
+    }
+  },
+  "required": [
+    "doc_code",
+    "doc_name",
+    "doc_type",
+    "status"
+  ]
+}

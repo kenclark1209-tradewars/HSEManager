@@ -1,0 +1,65 @@
+{
+  "name": "Action",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Tiêu đề hành động"
+    },
+    "description": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["corrective", "preventive", "improvement"],
+      "default": "corrective"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["open", "assigned", "in_progress", "pending_approval", "completed", "closed"],
+      "default": "open"
+    },
+    "priority": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "critical"],
+      "default": "medium"
+    },
+    "assigned_to": {
+      "type": "string"
+    },
+    "assigned_by": {
+      "type": "string"
+    },
+    "due_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "linked_incident_id": {
+      "type": "string"
+    },
+    "linked_risk_id": {
+      "type": "string"
+    },
+    "evidence_count": {
+      "type": "number",
+      "default": 0
+    },
+    "completed_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "closed_by": {
+      "type": "string"
+    },
+    "approved_by": {
+      "type": "string"
+    },
+    "approval_notes": {
+      "type": "string"
+    },
+    "rejection_reason": {
+      "type": "string"
+    }
+  },
+  "required": ["title", "type", "status"]
+}

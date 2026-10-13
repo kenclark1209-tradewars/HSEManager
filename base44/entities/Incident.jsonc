@@ -1,0 +1,256 @@
+{
+  "name": "Incident",
+  "type": "object",
+  "properties": {
+    "report_no": {
+      "type": "string",
+      "description": "S\u1ed1 b\u00e1o c\u00e1o"
+    },
+    "title": {
+      "type": "string",
+      "description": "Ti\u00eau \u0111\u1ec1 s\u1ef1 c\u1ed1"
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "near_miss",
+        "first_aid",
+        "medical_treatment",
+        "lost_time",
+        "permanent_disability",
+        "fatality"
+      ],
+      "default": "first_aid",
+      "description": "M\u1ee9c \u0111\u1ed9 nghi\u00eam tr\u1ecdng"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "open",
+        "investigating",
+        "action_required",
+        "pending_closure",
+        "closed"
+      ],
+      "default": "open"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "injury",
+        "near_miss",
+        "property_damage",
+        "environmental",
+        "fire",
+        "chemical",
+        "electrical",
+        "other"
+      ],
+      "default": "other"
+    },
+    "incident_type": {
+      "type": "string",
+      "enum": [
+        "accident",
+        "near_miss",
+        "dangerous_occurrence",
+        "occupational_disease"
+      ],
+      "default": "accident"
+    },
+    "date_occurred": {
+      "type": "string",
+      "format": "date"
+    },
+    "time_occurred": {
+      "type": "string"
+    },
+    "date_reported": {
+      "type": "string",
+      "format": "date"
+    },
+    "location": {
+      "type": "string"
+    },
+    "department": {
+      "type": "string"
+    },
+    "work_activity": {
+      "type": "string",
+      "description": "Ho\u1ea1t \u0111\u1ed9ng c\u00f4ng vi\u1ec7c t\u1ea1i th\u1eddi \u0111i\u1ec3m x\u1ea3y ra"
+    },
+    "reported_by": {
+      "type": "string"
+    },
+    "reported_by_position": {
+      "type": "string"
+    },
+    "assigned_to": {
+      "type": "string"
+    },
+    "supervisor_name": {
+      "type": "string",
+      "description": "T\u00ean ng\u01b0\u1eddi gi\u00e1m s\u00e1t"
+    },
+    "witnesses": {
+      "type": "string",
+      "description": "Nh\u00e2n ch\u1ee9ng"
+    },
+    "victim_name": {
+      "type": "string"
+    },
+    "victim_age": {
+      "type": "number"
+    },
+    "victim_gender": {
+      "type": "string",
+      "enum": [
+        "male",
+        "female",
+        "other"
+      ]
+    },
+    "victim_position": {
+      "type": "string"
+    },
+    "victim_department": {
+      "type": "string"
+    },
+    "victim_experience_years": {
+      "type": "number"
+    },
+    "nature_of_injury": {
+      "type": "string",
+      "description": "T\u00ednh ch\u1ea5t ch\u1ea5n th\u01b0\u01a1ng (g\u00e3y x\u01b0\u01a1ng, b\u1ecfng...)"
+    },
+    "body_part_affected": {
+      "type": "string",
+      "description": "B\u1ed9 ph\u1eadn c\u01a1 th\u1ec3 b\u1ecb \u1ea3nh h\u01b0\u1edfng"
+    },
+    "treatment_provided": {
+      "type": "string"
+    },
+    "lost_time_days": {
+      "type": "number",
+      "default": 0
+    },
+    "is_lti": {
+      "type": "boolean",
+      "default": false,
+      "description": "Lost Time Injury"
+    },
+    "description": {
+      "type": "string",
+      "description": "M\u00f4 t\u1ea3 chi ti\u1ebft di\u1ec5n bi\u1ebfn s\u1ef1 c\u1ed1"
+    },
+    "sequence_of_events": {
+      "type": "string",
+      "description": "Tr\u00ecnh t\u1ef1 s\u1ef1 ki\u1ec7n d\u1eabn \u0111\u1ebfn s\u1ef1 c\u1ed1"
+    },
+    "immediate_causes": {
+      "type": "string",
+      "description": "Nguy\u00ean nh\u00e2n tr\u1ef1c ti\u1ebfp (h\u00e0nh vi/\u0111i\u1ec1u ki\u1ec7n kh\u00f4ng an to\u00e0n)"
+    },
+    "unsafe_acts": {
+      "type": "string"
+    },
+    "unsafe_conditions": {
+      "type": "string"
+    },
+    "root_cause_why1": {
+      "type": "string"
+    },
+    "root_cause_why2": {
+      "type": "string"
+    },
+    "root_cause_why3": {
+      "type": "string"
+    },
+    "root_cause_why4": {
+      "type": "string"
+    },
+    "root_cause_why5": {
+      "type": "string"
+    },
+    "root_cause_technical": {
+      "type": "string"
+    },
+    "root_cause_human": {
+      "type": "string"
+    },
+    "root_cause_systemic": {
+      "type": "string"
+    },
+    "root_cause_procedural": {
+      "type": "string"
+    },
+    "root_cause_training": {
+      "type": "string"
+    },
+    "root_cause_summary": {
+      "type": "string",
+      "description": "T\u00f3m t\u1eaft nguy\u00ean nh\u00e2n g\u1ed1c r\u1ec5"
+    },
+    "corrective_actions_count": {
+      "type": "number",
+      "default": 0
+    },
+    "preventive_measures": {
+      "type": "string"
+    },
+    "lessons_learned": {
+      "type": "string"
+    },
+    "property_damage_description": {
+      "type": "string"
+    },
+    "property_damage_cost": {
+      "type": "number"
+    },
+    "environmental_impact": {
+      "type": "string"
+    },
+    "investigation_team": {
+      "type": "string"
+    },
+    "investigation_start_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "investigation_end_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "investigation_findings": {
+      "type": "string"
+    },
+    "management_review_by": {
+      "type": "string"
+    },
+    "management_review_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "management_comments": {
+      "type": "string"
+    },
+    "linked_risk_id": {
+      "type": "string"
+    },
+    "regulation_reference": {
+      "type": "string"
+    },
+    "closed_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "closed_by": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "severity",
+    "status"
+  ]
+}

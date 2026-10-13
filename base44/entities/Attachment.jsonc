@@ -1,0 +1,40 @@
+{
+  "name": "Attachment",
+  "type": "object",
+  "properties": {
+    "file_name": {
+      "type": "string"
+    },
+    "file_url": {
+      "type": "string"
+    },
+    "file_type": {
+      "type": "string"
+    },
+    "module": {
+      "type": "string",
+      "enum": [
+        "incident",
+        "action",
+        "sop",
+        "risk",
+        "regulation"
+      ]
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "uploaded_by": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "file_name",
+    "file_url",
+    "module",
+    "module_id"
+  ]
+}

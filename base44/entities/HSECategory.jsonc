@@ -1,0 +1,84 @@
+{
+  "name": "HSECategory",
+  "type": "object",
+  "properties": {
+    "category_code": {
+      "type": "string",
+      "description": "M\u00e3 h\u1ea1ng m\u1ee5c c\u1ed1 \u0111\u1ecbnh, VD: FIRE_SAFETY"
+    },
+    "display_number": {
+      "type": "number",
+      "description": "S\u1ed1 th\u1ee9 t\u1ef1 01-41"
+    },
+    "name_en": {
+      "type": "string"
+    },
+    "name_vi": {
+      "type": "string"
+    },
+    "primary_law_codes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "M\u00e3 v\u0103n b\u1ea3n lu\u1eadt ch\u00ednh"
+    },
+    "secondary_law_codes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "international_standard_codes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "law_last_updated": {
+      "type": "string",
+      "format": "date"
+    },
+    "has_pending_law_update": {
+      "type": "boolean",
+      "default": false
+    },
+    "pending_update_description": {
+      "type": "string"
+    },
+    "risk_level": {
+      "type": "string",
+      "enum": [
+        "LOW",
+        "MEDIUM",
+        "HIGH",
+        "CRITICAL"
+      ],
+      "default": "MEDIUM"
+    },
+    "review_frequency": {
+      "type": "string",
+      "enum": [
+        "MONTHLY",
+        "QUARTERLY",
+        "ANNUALLY"
+      ],
+      "default": "ANNUALLY"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "responsible_person": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "category_code",
+    "name_en",
+    "display_number"
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "name": "Inspection",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "inspection_type": {
+      "type": "string",
+      "enum": [
+        "routine",
+        "scheduled",
+        "unscheduled",
+        "regulatory",
+        "internal_audit"
+      ],
+      "default": "routine"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "planned",
+        "in_progress",
+        "completed",
+        "overdue"
+      ],
+      "default": "planned"
+    },
+    "location": {
+      "type": "string"
+    },
+    "department": {
+      "type": "string"
+    },
+    "inspector": {
+      "type": "string"
+    },
+    "planned_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "actual_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "checklist_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "type": "string"
+          },
+          "result": {
+            "type": "string",
+            "enum": [
+              "pass",
+              "fail",
+              "na"
+            ]
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "findings": {
+      "type": "string"
+    },
+    "score": {
+      "type": "number"
+    },
+    "non_conformities_count": {
+      "type": "number",
+      "default": 0
+    },
+    "linked_action_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "next_inspection_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 1000
+    }
+  },
+  "required": [
+    "title",
+    "inspection_type",
+    "status"
+  ]
+}

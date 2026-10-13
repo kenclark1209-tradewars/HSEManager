@@ -1,0 +1,69 @@
+{
+  "name": "HSEPlan",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "plan_type": {
+      "type": "string",
+      "enum": [
+        "annual",
+        "quarterly",
+        "monthly",
+        "project"
+      ],
+      "default": "annual"
+    },
+    "year": {
+      "type": "number"
+    },
+    "quarter": {
+      "type": "number"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "approved",
+        "in_progress",
+        "completed",
+        "cancelled"
+      ],
+      "default": "draft"
+    },
+    "objectives": {
+      "type": "string"
+    },
+    "targets": {
+      "type": "string"
+    },
+    "budget": {
+      "type": "number"
+    },
+    "responsible_person": {
+      "type": "string"
+    },
+    "hse_category_id": {
+      "type": "string"
+    },
+    "progress_percent": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "title"
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "name": "HSEDocument",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "T\u00ean t\u00e0i li\u1ec7u"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "sop",
+        "regulation",
+        "incident_report",
+        "risk_assessment",
+        "training",
+        "policy",
+        "checklist",
+        "other"
+      ],
+      "default": "other",
+      "description": "Lo\u1ea1i t\u00e0i li\u1ec7u"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "T\u1eeb kh\u00f3a g\u1eafn th\u1ebb"
+    },
+    "file_url": {
+      "type": "string",
+      "description": "URL file g\u1ed1c \u0111\u00e3 upload"
+    },
+    "file_name": {
+      "type": "string"
+    },
+    "file_type": {
+      "type": "string",
+      "description": "pdf, docx, xlsx, txt..."
+    },
+    "extracted_text": {
+      "type": "string",
+      "description": "N\u1ed9i dung v\u0103n b\u1ea3n \u0111\u00e3 tr\u00edch xu\u1ea5t t\u1eeb file"
+    },
+    "summary": {
+      "type": "string",
+      "description": "T\u00f3m t\u1eaft n\u1ed9i dung do AI t\u1ea1o"
+    },
+    "key_points": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "C\u00e1c \u0111i\u1ec3m ch\u00ednh AI tr\u00edch xu\u1ea5t"
+    },
+    "related_regulations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Quy \u0111\u1ecbnh li\u00ean quan (ISO, TCVN...)"
+    },
+    "language": {
+      "type": "string",
+      "default": "vi",
+      "description": "Ng\u00f4n ng\u1eef t\u00e0i li\u1ec7u"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "processing",
+        "indexed",
+        "failed"
+      ],
+      "default": "processing",
+      "description": "Tr\u1ea1ng th\u00e1i x\u1eed l\u00fd"
+    },
+    "indexed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "department": {
+      "type": "string"
+    },
+    "uploaded_by": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string",
+      "default": "1.0"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "title",
+    "category"
+  ]
+}
