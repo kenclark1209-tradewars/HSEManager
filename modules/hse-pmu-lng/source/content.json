@@ -1,0 +1,2795 @@
+{
+  "phases": [
+    {
+      "id": "P0",
+      "title": "01. Khởi động & pháp lý",
+      "short": "Khởi động",
+      "sub": "Xác định phạm vi, trách nhiệm, điều kiện pháp lý và rủi ro nền",
+      "color": "#38bdf8"
+    },
+    {
+      "id": "P1",
+      "title": "02. Thiết kế & lựa chọn EPC",
+      "short": "Chuẩn bị EPC",
+      "sub": "Đưa HSE vào thiết kế, HSMT, đánh giá và hợp đồng",
+      "color": "#a78bfa"
+    },
+    {
+      "id": "P2",
+      "title": "03. Huy động & xây lắp",
+      "short": "Thi công",
+      "sub": "Kiểm chứng hệ thống EPC, kiểm soát rủi ro giao diện và tuân thủ",
+      "color": "#fb923c"
+    },
+    {
+      "id": "P3",
+      "title": "04. Chạy thử & nhận khí",
+      "short": "Chạy thử",
+      "sub": "An toàn công nghệ, PSSR, SIMOPS, first gas",
+      "color": "#f472b6"
+    },
+    {
+      "id": "P4",
+      "title": "05. Bàn giao & đóng dự án",
+      "short": "Bàn giao",
+      "sub": "Chuyển giao hàng rào kiểm soát sang vận hành, đóng tồn đọng",
+      "color": "#34d399"
+    }
+  ],
+  "sources": [
+    {
+      "id": "XD",
+      "code": "Luật 135/2025/QH15",
+      "title": "Luật Xây dựng",
+      "domain": "Xây dựng",
+      "kind": "Pháp luật VN",
+      "date": "01/07/2026",
+      "url": "https://vanban.chinhphu.vn/?classid=1&docid=216514&pageid=27160&typegroupid=3",
+      "use": "Hoạt động xây dựng, dự án, thiết kế, thi công, nghiệm thu và trách nhiệm các chủ thể.",
+      "note": "Đối chiếu quy định chuyển tiếp và các nghị định hướng dẫn theo loại dự án."
+    },
+    {
+      "id": "ND207",
+      "code": "NĐ 207/2026/NĐ-CP",
+      "title": "Quản lý chất lượng, thi công và bảo trì công trình",
+      "domain": "Xây dựng",
+      "kind": "Pháp luật VN",
+      "date": "01/07/2026",
+      "url": "https://vanban.chinhphu.vn/?docid=218450&pageid=27160&typegroupid=4",
+      "use": "Điều 15: trách nhiệm nhà thầu; Điều 16, đặc biệt khoản 20: trách nhiệm người quản lý an toàn của chủ đầu tư; tổ chức kiểm tra, điều phối và can thiệp.",
+      "note": "Không mặc định HSE Manager được ký thay chủ đầu tư mọi hồ sơ. Xem quyết định phân quyền và hợp đồng."
+    },
+    {
+      "id": "Q18",
+      "code": "QCVN 18:2021/BXD",
+      "title": "An toàn trong thi công xây dựng",
+      "domain": "An toàn thi công",
+      "kind": "Quy chuẩn VN",
+      "date": "20/06/2022",
+      "url": "https://vbpl.moj.gov.vn/boxaydung/Pages/vbpq-toanvan.aspx?ItemID=152388",
+      "use": "Quy chuẩn an toàn thi công; tra cứu biện pháp, thiết bị, công việc nguy hiểm; ban hành bởi TT 16/2021/TT-BXD.",
+      "note": "Rà soát phạm vi áp dụng, danh mục công việc và các văn bản thay thế/sửa đổi tại thời điểm sử dụng."
+    },
+    {
+      "id": "AT",
+      "code": "Luật 84/2015/QH13",
+      "title": "Luật An toàn, vệ sinh lao động",
+      "domain": "An toàn thi công",
+      "kind": "Pháp luật VN",
+      "date": "01/07/2016",
+      "url": "https://vbpl.moj.gov.vn/vanphongchinhphu/Pages/vbpq-toanvan.aspx?ItemID=70811",
+      "use": "Quản lý nguy cơ, nghĩa vụ người sử dụng lao động, huấn luyện, TNLĐ và điều tra/báo cáo.",
+      "note": "Đã được sửa đổi một phần; kiểm tra văn bản hiện hành và xác định nghĩa vụ của từng người sử dụng lao động."
+    },
+    {
+      "id": "ND44",
+      "code": "NĐ 44/2016/NĐ-CP",
+      "title": "Kiểm định an toàn, huấn luyện ATVSLĐ, quan trắc môi trường lao động",
+      "domain": "An toàn thi công",
+      "kind": "Pháp luật VN",
+      "date": "01/07/2016",
+      "url": "https://vbpl.moj.gov.vn/hoabinh/Pages/vbpq-toanvan.aspx?ItemID=117760",
+      "use": "Kiểm tra chương trình huấn luyện, kiểm định thiết bị và bằng chứng năng lực khi EPC huy động.",
+      "note": "Đã sửa đổi/bổ sung nhiều lần; không dùng bản gốc đơn lẻ để kết luận nghĩa vụ hiện tại."
+    },
+    {
+      "id": "MT",
+      "code": "Luật 72/2020/QH14",
+      "title": "Luật Bảo vệ môi trường",
+      "domain": "Môi trường",
+      "kind": "Pháp luật VN",
+      "date": "01/01/2022",
+      "url": "https://vanban.chinhphu.vn/?classid=1&docid=202613&pageid=27160&typ=",
+      "use": "ĐTM, phân loại dự án, giấy phép môi trường, vận hành thử công trình xử lý chất thải và nghĩa vụ môi trường.",
+      "note": "Luật có các lần sửa đổi; xác định phân nhóm dự án và thẩm quyền dựa trên hồ sơ thực tế."
+    },
+    {
+      "id": "ND08",
+      "code": "NĐ 08/2022/NĐ-CP",
+      "title": "Quy định chi tiết Luật Bảo vệ môi trường",
+      "domain": "Môi trường",
+      "kind": "Pháp luật VN",
+      "date": "10/01/2022",
+      "url": "https://vanban.chinhphu.vn/?classid=1&docid=205092&orggroupid=2&pageid=27160",
+      "use": "Hồ sơ ĐTM, giấy phép, quản lý chất thải và các thủ tục môi trường.",
+      "note": "Phải đọc kèm NĐ 05/2025 và NĐ 48/2026; không viện dẫn bản 2022 nguyên trạng."
+    },
+    {
+      "id": "ND05",
+      "code": "NĐ 05/2025/NĐ-CP",
+      "title": "Sửa đổi NĐ 08/2022 về bảo vệ môi trường",
+      "domain": "Môi trường",
+      "kind": "Pháp luật VN",
+      "date": "06/01/2025",
+      "url": "https://vanban.chinhphu.vn/?docid=212284&pageid=27160",
+      "use": "Cập nhật các nội dung sửa đổi của NĐ 08/2022.",
+      "note": "Đọc cùng NĐ 48/2026 đối với nội dung sửa đổi tiếp theo."
+    },
+    {
+      "id": "ND48",
+      "code": "NĐ 48/2026/NĐ-CP",
+      "title": "Sửa đổi NĐ 08/2022 (đã sửa bởi NĐ 05/2025)",
+      "domain": "Môi trường",
+      "kind": "Pháp luật VN",
+      "date": "29/01/2026",
+      "url": "https://vanban.chinhphu.vn/?classid=1&docid=216867&pageid=27160&typegroupid=4",
+      "use": "Rà soát thủ tục môi trường theo quy định cập nhật tại thời điểm dự án chuẩn bị đầu tư.",
+      "note": "Không tự xác định nghĩa vụ ĐTM/giấy phép cho LNG Nghi Sơn khi chưa có hồ sơ phân loại và phạm vi thiết kế."
+    },
+    {
+      "id": "PCCC",
+      "code": "Luật 55/2024/QH15",
+      "title": "Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ",
+      "domain": "PCCC",
+      "kind": "Pháp luật VN",
+      "date": "01/07/2025",
+      "url": "https://vanban.chinhphu.vn/?classid=1&docid=212483&pageid=27160&typegroupid=3",
+      "use": "Trách nhiệm PCCC/CNCH, thẩm định thiết kế và các nghĩa vụ theo từng cơ sở/công trình.",
+      "note": "Có sửa đổi bởi Luật 118/2025 và Luật Xây dựng 135/2025 từ 01/07/2026; sử dụng văn bản hợp nhất mới nhất khi xác định thủ tục."
+    },
+    {
+      "id": "ND105",
+      "code": "NĐ 105/2025/NĐ-CP",
+      "title": "Quy định chi tiết Luật PCCC và CNCH",
+      "domain": "PCCC",
+      "kind": "Pháp luật VN",
+      "date": "01/07/2025",
+      "url": "https://vanban.chinhphu.vn/?classid=0&docid=213702&pageid=27160",
+      "use": "Kiểm tra phân loại đối tượng, trách nhiệm, thủ tục và điều kiện PCCC/CNCH theo phạm vi công trình.",
+      "note": "Xác minh các sửa đổi, cơ chế phân cấp thẩm quyền và quy định chuyển tiếp tính đến mốc làm hồ sơ."
+    },
+    {
+      "id": "Q06",
+      "code": "QCVN 06:2022/BXD + SĐ 1:2023",
+      "title": "An toàn cháy cho nhà và công trình",
+      "domain": "PCCC",
+      "kind": "Quy chuẩn VN",
+      "date": "16/01/2023",
+      "url": "https://vbpl.moj.gov.vn/boxaydung/Pages/vbpq-toanvan.aspx?ItemID=159422",
+      "use": "Rà soát phạm vi áp dụng quy chuẩn an toàn cháy đối với các nhà/công trình thuộc dự án.",
+      "note": "QCVN 06 không thay thế đánh giá rủi ro LNG chuyên ngành; áp dụng đúng phạm vi, sửa đổi và thiết kế được lựa chọn."
+    },
+    {
+      "id": "IFCLNG",
+      "code": "IFC EHS LNG (2017)",
+      "title": "EHS Guidelines for Liquefied Natural Gas Facilities",
+      "domain": "LNG / PSM",
+      "kind": "Hướng dẫn quốc tế",
+      "date": "11/04/2017",
+      "url": "https://www.ifc.org/en/insights-reports/2017/publications-policy-ehs-lng",
+      "use": "Thực hành tốt cho kho LNG, tái hóa khí, cảng, vận tải và các rủi ro môi trường – sức khỏe – an toàn.",
+      "note": "Không tự động là luật Việt Nam; mức áp dụng phụ thuộc yêu cầu hợp đồng, tài trợ và đánh giá rủi ro dự án."
+    },
+    {
+      "id": "IFCGEN",
+      "code": "IFC General EHS",
+      "title": "General Environmental, Health and Safety Guidelines",
+      "domain": "Quản trị HSE",
+      "kind": "Hướng dẫn quốc tế",
+      "date": "Bản công bố IFC",
+      "url": "https://www.ifc.org/en/insights-reports/general-environmental-health-and-safety-guidelines",
+      "use": "Cơ sở tham khảo về môi trường, sức khỏe nghề nghiệp, cộng đồng, xây dựng và ứng cứu.",
+      "note": "Thực hành tốt, không tự động là quy phạm pháp luật Việt Nam."
+    },
+    {
+      "id": "IOGP",
+      "code": "IOGP Report 423",
+      "title": "HSE management guidelines in a contract environment",
+      "domain": "Hợp đồng / EPC",
+      "kind": "Hướng dẫn quốc tế",
+      "date": "24/04/2017",
+      "url": "https://idms.iogp.org/Documents/485",
+      "use": "Lập kế hoạch, đánh giá năng lực, đấu thầu, bridging, huy động, thực hiện và đóng hợp đồng.",
+      "note": "Hướng dẫn tham khảo; phân định trách nhiệm cuối cùng bằng hợp đồng và HSE bridging document."
+    },
+    {
+      "id": "NFPA59A",
+      "code": "NFPA 59A:2026",
+      "title": "Production, Storage and Handling of LNG",
+      "domain": "LNG / PSM",
+      "kind": "Tiêu chuẩn quốc tế",
+      "date": "Ấn bản 2026",
+      "url": "https://www.nfpa.org/codes-and-standards/nfpa-59-a-standard-development/59a",
+      "use": "Tham khảo yêu cầu an toàn về vị trí, thiết kế, xây dựng và vận hành cơ sở LNG.",
+      "note": "Chỉ áp dụng bắt buộc khi được dẫn chiếu bởi văn bản, hồ sơ thiết kế/hợp đồng hoặc yêu cầu khác có hiệu lực."
+    },
+    {
+      "id": "Q19",
+      "code": "QCVN 19:2022/BCT",
+      "title": "Quy chuẩn an toàn kho chứa LNG trên bờ (TT 40/2022/TT-BCT)",
+      "domain": "LNG / PSM",
+      "kind": "Quy chuẩn VN",
+      "date": "01/07/2023",
+      "url": "https://vanban.chinhphu.vn/?docid=207203&pageid=27160",
+      "use": "Quy chuẩn chuyên ngành LNG trên bờ: đặt địa điểm, bố trí, thiết kế, vận hành và bảo dưỡng trong phạm vi điều chỉnh; rà soát hồ sơ thuyết minh tuân thủ.",
+      "note": "Xác minh công trình có kho LNG trên bờ và phần nào thuộc phạm vi; không tự đồng nhất với FSRU nổi hoặc nhà máy điện không có kho LNG."
+    },
+    {
+      "id": "TC8611",
+      "code": "TCVN 8611:2023",
+      "title": "LNG – Thiết kế công trình trên bờ",
+      "domain": "LNG / PSM",
+      "kind": "Tiêu chuẩn VN",
+      "date": "2023",
+      "url": "https://tieuchuan.vsqi.gov.vn/tieuchuan/view?sohieu=TCVN+8611%3A2023",
+      "use": "Khung thiết kế kho LNG trên bờ, hệ thống tồn chứa, hóa khí và giao nhận; tham khảo đánh giá Design Basis.",
+      "note": "Thay TCVN 8611:2010; tiêu chuẩn này không mặc nhiên áp dụng cho FSRU nổi. Nghĩa vụ sử dụng phụ thuộc quy chuẩn/thiết kế/hợp đồng."
+    },
+    {
+      "id": "TC8612",
+      "code": "TCVN 8612:2023",
+      "title": "LNG – Thiết kế và thử nghiệm cần xuất nhập LNG cho kho cảng trên bờ",
+      "domain": "LNG / PSM",
+      "kind": "Tiêu chuẩn VN",
+      "date": "2023",
+      "url": "https://tieuchuan.vsqi.gov.vn/tieuchuan/view?sohieu=TCVN+8612%3A2023",
+      "use": "Tham khảo yêu cầu kỹ thuật, thử nghiệm cần xuất nhập LNG ở giao diện tàu – bờ khi dự án có hạng mục này.",
+      "note": "Thay TCVN 8612:2010; xác minh công nghệ, phạm vi hợp đồng và việc viện dẫn trong thiết kế được duyệt."
+    },
+    {
+      "id": "TC8613",
+      "code": "TCVN 8613:2023",
+      "title": "LNG – Quy trình giao nhận sản phẩm và vận hành cảng",
+      "domain": "LNG / PSM",
+      "kind": "Tiêu chuẩn VN",
+      "date": "2023",
+      "url": "https://tieuchuan.vsqi.gov.vn/tieuchuan/view?sohieu=TCVN+8613%3A2023",
+      "use": "Ship-to-shore interface: tàu, cầu cảng, hoa tiêu, neo đậu, liên lạc, giao nhận LNG trong phạm vi áp dụng.",
+      "note": "Thay TCVN 8613:2010; chỉ xem là yêu cầu bắt buộc khi được viện dẫn trong pháp luật, hợp đồng hoặc hồ sơ thiết kế áp dụng."
+    },
+    {
+      "id": "ND87",
+      "code": "NĐ 87/2018/NĐ-CP",
+      "title": "Điều kiện kinh doanh khí",
+      "domain": "LNG / PSM",
+      "kind": "Pháp luật VN",
+      "date": "01/08/2018",
+      "url": "https://vanban.chinhphu.vn/default.aspx?docid=193966&pageid=27160",
+      "use": "Đối chiếu các điều kiện kinh doanh khí nếu pháp nhân dự án có hoạt động kinh doanh LNG thuộc phạm vi điều chỉnh.",
+      "note": "Văn bản đã được sửa đổi một phần; không mặc định đơn vị điện khí phải có mọi giấy phép kinh doanh khí. Pháp lý phân tích trigger riêng."
+    },
+    {
+      "id": "ND217",
+      "code": "NĐ 217/2026/NĐ-CP",
+      "title": "Quản lý hoạt động xây dựng",
+      "domain": "Xây dựng",
+      "kind": "Pháp luật VN",
+      "date": "01/07/2026",
+      "url": "https://vanban.chinhphu.vn/?docid=218509&pageid=27160",
+      "use": "Quy trình thiết kế, danh mục tiêu chuẩn áp dụng, quản lý hoạt động xây dựng và các điều kiện theo giai đoạn.",
+      "note": "Kiểm tra văn bản hợp nhất 91/2026/VBHN-NĐ-BXD khi tra cứu các nội dung đã sửa đổi; HSE không tự duyệt danh mục tiêu chuẩn thay người có thẩm quyền."
+    },
+    {
+      "id": "ND210",
+      "code": "NĐ 210/2026/NĐ-CP",
+      "title": "Quy định về hợp đồng xây dựng",
+      "domain": "Xây dựng",
+      "kind": "Pháp luật VN",
+      "date": "01/07/2026",
+      "url": "https://vanban.chinhphu.vn/?docid=218451&pageid=27160",
+      "use": "Khung pháp lý quản lý hợp đồng EPC, cơ chế yêu cầu, thay đổi, xử lý vi phạm và phối hợp HSE khi xây điều khoản hợp đồng.",
+      "note": "Rà soát phạm vi áp dụng với Legal/Contracts; không tự suy diễn mọi quyền xử lý từ các mẫu điều khoản HSE."
+    },
+    {
+      "id": "ND212",
+      "code": "NĐ 212/2026/NĐ-CP",
+      "title": "Điều kiện năng lực hoạt động xây dựng và dữ liệu hoạt động xây dựng",
+      "domain": "Xây dựng",
+      "kind": "Pháp luật VN",
+      "date": "01/07/2026",
+      "url": "https://vanban.chinhphu.vn/?classid=0&docid=218489&pageid=27160",
+      "use": "Đối chiếu điều kiện năng lực của tổ chức/cá nhân tham gia xây dựng và nghĩa vụ thông tin trong phạm vi áp dụng.",
+      "note": "Phối hợp bộ phận đấu thầu/pháp lý/kỹ thuật; không dùng mỗi chứng chỉ HSE thay cho đánh giá đủ điều kiện năng lực xây dựng."
+    },
+    {
+      "id": "TT32",
+      "code": "TT 32/2026/TT-BXD",
+      "title": "Quy định chi tiết một số điều NĐ 207/2026 về quản lý chất lượng và thi công",
+      "domain": "Xây dựng",
+      "kind": "Pháp luật VN",
+      "date": "01/07/2026",
+      "url": "https://vanban.chinhphu.vn/?docid=218527&pageid=27160",
+      "use": "Nội dung hướng dẫn thí nghiệm, quan trắc, kiểm định, giám định và quan trắc phục vụ bảo trì nếu hạng mục/công việc thuộc diện điều chỉnh.",
+      "note": "Không xem thông tư này là quy trình HSE chung cho mọi tình huống; phối hợp kỹ thuật/QAQC để xác định khoản áp dụng."
+    },
+    {
+      "id": "ND347",
+      "code": "NĐ 347/2026/NĐ-CP",
+      "title": "Sửa đổi NĐ 105/2025 về PCCC/CNCH và các quy định liên quan",
+      "domain": "PCCC",
+      "kind": "Pháp luật VN",
+      "date": "15/09/2026",
+      "url": "https://vanban.chinhphu.vn/?classid=0&docid=219411&pageid=27160",
+      "use": "Tra cứu điểm sửa đổi PCCC/CNCH từ tháng 9/2026 khi lập roadmap thẩm định và nghiệm thu.",
+      "note": "Đọc NĐ 105/2025 theo nội dung đã sửa đổi, không dùng bản gốc đơn lẻ."
+    },
+    {
+      "id": "L146",
+      "code": "Luật 146/2025/QH15",
+      "title": "Sửa đổi một số điều của các luật trong lĩnh vực nông nghiệp và môi trường",
+      "domain": "Môi trường",
+      "kind": "Pháp luật VN",
+      "date": "01/01/2026",
+      "url": "https://vbpl.moj.gov.vn/botainguyen/Pages/vbpq-toanvan.aspx?ItemID=186269",
+      "use": "Có sửa đổi Luật Bảo vệ môi trường; cần đối chiếu nghĩa vụ ĐTM/giấy phép khi áp dụng luật hiện hành.",
+      "note": "Đọc cùng Luật BVMT 72/2020 và các nghị định sửa đổi, không viện dẫn bản luật gốc riêng rẽ."
+    }
+  ],
+  "gates": [
+    {
+      "id": "G0",
+      "phase": "P0",
+      "title": "G0 · Xác định đúng phạm vi chủ đầu tư",
+      "question": "Pháp nhân, ranh giới công trình, phạm vi cảng/kho LNG/tái hóa khí/nhà máy điện và trách nhiệm từng bên đã rõ chưa?",
+      "evidence": "Sơ đồ pháp nhân, phạm vi dự án, interface register, authority matrix",
+      "stop": "Không tự xác nhận nghĩa vụ thủ tục khi chưa xác định đúng đối tượng và phạm vi."
+    },
+    {
+      "id": "G1",
+      "phase": "P0",
+      "title": "G1 · Đường đi pháp lý đủ rõ",
+      "question": "Đã có ma trận thủ tục ĐTM, PCCC, xây dựng, đất đai, chuyên ngành cùng mốc thời gian và đơn vị chủ trì?",
+      "evidence": "Legal register có người, hạn, trạng thái và chứng cứ; xác nhận pháp lý",
+      "stop": "Chưa triển khai hoạt động yêu cầu điều kiện pháp lý mà điều kiện chưa được đáp ứng."
+    },
+    {
+      "id": "G2",
+      "phase": "P1",
+      "title": "G2 · Yêu cầu HSE trong EPC được khóa",
+      "question": "HSMT/hợp đồng có tiêu chí năng lực, kiểm soát rủi ro trọng yếu, phân vai và chế tài rõ?",
+      "evidence": "Employer HSE Requirements, đánh giá năng lực, HSE schedule hợp đồng",
+      "stop": "Không để khoảng trống trách nhiệm giữa chủ đầu tư và EPC."
+    },
+    {
+      "id": "G3",
+      "phase": "P2",
+      "title": "G3 · Mobilization readiness",
+      "question": "EPC đã chứng minh nguồn lực, kế hoạch HSE, ứng cứu, huấn luyện, thiết bị và hệ thống kiểm soát?",
+      "evidence": "Biên bản readiness review, danh mục tồn tại và phê duyệt có thẩm quyền",
+      "stop": "Công việc thuộc nhóm gate chưa đạt không được triển khai."
+    },
+    {
+      "id": "G4",
+      "phase": "P2",
+      "title": "G4 · Hoạt động rủi ro cao",
+      "question": "PTW, phương án, năng lực và các kiểm soát trọng yếu đã kiểm chứng tại hiện trường?",
+      "evidence": "Critical control verification, giấy phép theo phân quyền, hồ sơ kiểm tra",
+      "stop": "Tạm dừng/ngăn chặn công việc có nguy cơ nghiêm trọng theo pháp luật và quy trình."
+    },
+    {
+      "id": "G5",
+      "phase": "P3",
+      "title": "G5 · PSSR / first gas readiness",
+      "question": "Các điều kiện an toàn công nghệ, vận hành, ứng cứu và tồn tại trọng yếu đã được đội có thẩm quyền xác nhận?",
+      "evidence": "PSSR report, punch list, MOC, permit for introduction of hydrocarbons",
+      "stop": "Không được dùng KPI tai nạn bằng 0 để thay cho kiểm chứng hàng rào an toàn công nghệ."
+    },
+    {
+      "id": "G6",
+      "phase": "P4",
+      "title": "G6 · Handover sang O&M",
+      "question": "Nghĩa vụ môi trường, PCCC, thiết kế hoàn công, hồ sơ kiểm tra và trách nhiệm vận hành đã bàn giao?",
+      "evidence": "HSE handover dossier, transfer matrix, open item ownership",
+      "stop": "Không đóng các vấn đề an toàn chưa có chủ sở hữu và kế hoạch kiểm soát."
+    }
+  ],
+  "tasks": [
+    {
+      "id": "P0-01",
+      "phase": "P0",
+      "area": "Cơ cấu & trách nhiệm",
+      "title": "Xác định pháp nhân, vai trò BQLDA và ranh giới dự án",
+      "goal": "Không thể lập một kế hoạch HSE đúng nếu chưa biết chủ đầu tư, đơn vị phát triển dự án, nhà thầu/tư vấn và phạm vi hạng mục công trình.",
+      "steps": [
+        "Xin quyết định thành lập BQLDA, cơ cấu tổ chức, điều lệ/phân cấp và hợp đồng tư vấn hiện có; chỉ rõ anh báo cáo ai.",
+        "Phối hợp pháp lý xác định pháp nhân sở hữu dự án, đơn vị ký hợp đồng EPC, các gói đã được/tương lai sẽ thuê, phạm vi cơ sở LNG – đường ống – nhà máy điện – cảng.",
+        "Lập sơ đồ các bên và ma trận RACI đối với thiết kế, ĐTM, PCCC, HAZID, HSMT, giám sát, tạm dừng công việc, báo cáo sự cố.",
+        "Kiểm tra điểm giao diện với chủ đầu tư của các gói khác, cơ quan quản lý, đơn vị vận hành tương lai; ghi các vấn đề chưa có chủ sở hữu.",
+        "Trình PM phê duyệt nguyên tắc phân trách nhiệm; phát hành thông báo cho bộ phận liên quan và theo dõi thay đổi."
+      ],
+      "inputs": [
+        "Quyết định tổ chức BQLDA",
+        "Danh mục công trình/gói thầu",
+        "Hợp đồng, phân quyền ký",
+        "Sơ đồ dự án hiện có"
+      ],
+      "outputs": [
+        "Stakeholder & legal-entity map",
+        "RACI + Authority Matrix phiên bản 0.1",
+        "Interface Register"
+      ],
+      "accept": [
+        "Mỗi nghĩa vụ quan trọng có 01 accountable owner",
+        "Không nhầm chủ đầu tư với nhà thầu EPC",
+        "Người ký/chấp thuận từng hồ sơ được chỉ định"
+      ],
+      "red": [
+        "Chưa xác định ai làm chủ đầu tư pháp lý",
+        "HSE ký duyệt vượt thẩm quyền",
+        "Rủi ro cảng/FSRU nằm ngoài mọi hợp đồng"
+      ],
+      "refs": [
+        "XD",
+        "ND207",
+        "IOGP",
+        "ND217",
+        "ND210"
+      ],
+      "partners": "PM, Pháp lý, Kỹ thuật, Hợp đồng",
+      "example": "Ví dụ: Tuyến cấp khí nằm trong hợp đồng khác nhà máy điện. Ai quản lý interface PTW và ứng cứu tại điểm giao đấu nối?",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P0-02",
+      "phase": "P0",
+      "area": "Cơ cấu & trách nhiệm",
+      "title": "Thiết lập Project HSE Management Framework",
+      "goal": "Tạo cấu trúc quản trị thống nhất cho chủ đầu tư trước khi có EPC.",
+      "steps": [
+        "Phỏng vấn PM, kỹ thuật, pháp lý, môi trường, kế hoạch để chốt mục tiêu HSE và khẩu vị rủi ro; không tự áp một mô hình nhà máy đang vận hành.",
+        "Lập HSE policy, phạm vi áp dụng, cơ cấu họp, cơ chế báo cáo, tuyến escalation và thẩm quyền tạm dừng/khởi động lại.",
+        "Phân biệt các nhóm kiểm soát: pháp luật VN bắt buộc; quy chuẩn; yêu cầu hợp đồng; GIIP quốc tế; điều kiện dự án.",
+        "Xây danh mục quy trình tối thiểu: risk management, contractor HSE, incident, audit, management of change, emergency, interfaces.",
+        "Tổ chức workshop phê duyệt khung; triển khai qua induction và họp liên bộ phận; quản lý phiên bản."
+      ],
+      "inputs": [
+        "Sơ đồ BQLDA",
+        "Danh mục gói thầu",
+        "Chính sách tập đoàn (nếu có)",
+        "Cơ chế quản lý hợp đồng"
+      ],
+      "outputs": [
+        "Project HSE Framework",
+        "Meeting & reporting calendar",
+        "Governance/Authority Matrix"
+      ],
+      "accept": [
+        "Có chủ sở hữu cho mọi quy trình",
+        "Phân quyền không vượt quy định pháp luật",
+        "Khung áp dụng được cho nhiều EPC"
+      ],
+      "red": [
+        "Chỉ copy bộ HSE của nhà thầu",
+        "Chưa có tuyến báo cáo sự cố 24/7",
+        "Không có người quyết định rủi ro còn lại"
+      ],
+      "refs": [
+        "XD",
+        "ND207",
+        "IOGP",
+        "IFCGEN",
+        "ND217"
+      ],
+      "partners": "PM, Legal, Procurement, Engineering",
+      "example": "Ví dụ: Quy trình HSE chủ đầu tư quy định mức độ báo cáo trong 1 giờ theo yêu cầu nội bộ; đây là SLA hợp đồng, không phải thời hạn luật định.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P0-03",
+      "phase": "P0",
+      "area": "Pháp lý",
+      "title": "Lập và kiểm soát Legal Compliance Register",
+      "goal": "Biến hệ thống văn bản thành danh mục nghĩa vụ theo từng hạng mục, giai đoạn, người chịu trách nhiệm và bằng chứng.",
+      "steps": [
+        "Lập cây phạm vi theo hạng mục: kho LNG, cảng/bến, tái hóa khí, đường ống, nhà máy điện, đấu nối và công trình tạm; chỉ giữ các hạng mục thực tế.",
+        "Tập hợp luật/nghị định/quy chuẩn hiện hành theo môi trường, PCCC, xây dựng, ATVSLĐ và chuyên ngành; đánh dấu bản hợp nhất/sửa đổi.",
+        "Với từng nghĩa vụ ghi: Điều/khoản nếu đã xác minh, trigger áp dụng, chủ thể phải thực hiện, cơ quan/đơn vị giải quyết, hạn, hồ sơ chứng minh, mốc gate.",
+        "Họp với Legal và các tư vấn để phân loại: bắt buộc, tùy điều kiện, chưa rõ; không tự nhận tất cả đều áp dụng.",
+        "Duy trì cơ chế thay đổi pháp luật mỗi tháng hoặc trước milestone; không đánh dấu hoàn thành nếu chưa có bằng chứng."
+      ],
+      "inputs": [
+        "Phân loại dự án",
+        "Hồ sơ thiết kế",
+        "Tiến độ tổng thể",
+        "Thông tin pháp nhân và địa điểm"
+      ],
+      "outputs": [
+        "Legal Compliance Register",
+        "Permit/Approval Tracker",
+        "Bản đồ điều kiện theo milestone"
+      ],
+      "accept": [
+        "Mỗi mục có căn cứ và tính áp dụng",
+        "Biết chính xác hồ sơ nào là điều kiện trước hoạt động",
+        "Có danh mục câu hỏi cần xác minh bằng văn bản"
+      ],
+      "red": [
+        "Dẫn văn bản hết hiệu lực nguyên bản",
+        "Nhầm tiêu chuẩn quốc tế với luật VN",
+        "Không phân biệt nghĩa vụ của chủ đầu tư với EPC"
+      ],
+      "refs": [
+        "XD",
+        "ND207",
+        "AT",
+        "MT",
+        "ND08",
+        "ND05",
+        "ND48",
+        "PCCC",
+        "ND105",
+        "Q19",
+        "ND87",
+        "ND217",
+        "ND210",
+        "ND212",
+        "TT32",
+        "ND347",
+        "L146"
+      ],
+      "partners": "Legal, Environment, PCCC consultant, Engineering, PM",
+      "example": "Ví dụ: Không kết luận LNG bắt buộc có một giấy phép nhất định chỉ vì có chữ LNG; phải tra trigger theo cấu phần/hoạt động.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P0-04",
+      "phase": "P0",
+      "area": "Môi trường",
+      "title": "Điều phối hồ sơ ĐTM và điều kiện môi trường",
+      "goal": "HSE BQLDA không phải người tự lập ĐTM; vai trò là bảo đảm phạm vi đúng, rủi ro được nhận diện, hồ sơ tư vấn đủ chất lượng và mốc pháp lý được giữ.",
+      "steps": [
+        "Xác định loại dự án, nhóm dự án, đối tượng ĐTM và thẩm quyền theo luật đã sửa đổi; yêu cầu tư vấn môi trường lập Legal Basis Memo.",
+        "Đối chiếu nội dung ĐTM với sơ đồ công nghệ, công suất, vị trí, khu cảng/đường vận chuyển, khí thải, nước thải, chất thải, cộng đồng và tình huống khẩn cấp.",
+        "Tổ chức review workshop với process, civil, marine, Legal; ghi comment theo số mục/điểm chưa khớp và yêu cầu cập nhật.",
+        "Theo dõi tiến độ khảo sát nền, lấy ý kiến, thẩm định, phê duyệt/kết quả thủ tục và các điều kiện kèm theo đúng luật áp dụng.",
+        "Đưa các biện pháp môi trường đã cam kết vào yêu cầu EPC, ngân sách và chương trình giám sát trong thi công."
+      ],
+      "inputs": [
+        "Đề xuất đầu tư & thiết kế",
+        "Hồ sơ phân nhóm môi trường",
+        "Phạm vi khảo sát & cộng đồng",
+        "ĐTM draft"
+      ],
+      "outputs": [
+        "EIA Review Log",
+        "Environmental Commitments Register",
+        "Permit milestones"
+      ],
+      "accept": [
+        "Không bỏ sót hạng mục trong phạm vi ĐTM",
+        "Comment quan trọng được đóng bằng bằng chứng",
+        "Cam kết ĐTM được chuyển thành yêu cầu nhà thầu"
+      ],
+      "red": [
+        "ĐTM mô tả vị trí cũ",
+        "Thiếu kịch bản cảng/tuyến ống",
+        "Ghi hoàn thành ĐTM khi mới nộp hồ sơ"
+      ],
+      "refs": [
+        "MT",
+        "ND08",
+        "ND05",
+        "ND48",
+        "IFCLNG",
+        "Q19",
+        "L146"
+      ],
+      "partners": "Environment consultant, Legal, Process, Marine, Community affairs",
+      "example": "Ví dụ: ĐTM nói thi công trên bờ nhưng kế hoạch dự án có mở rộng bến tiếp nhận; anh yêu cầu xác minh tính bao phủ thay vì coi như đã đủ.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P0-05",
+      "phase": "P0",
+      "area": "PCCC",
+      "title": "Xây lộ trình nghĩa vụ PCCC/CNCH theo từng hạng mục",
+      "goal": "Tách rõ nội dung an toàn cháy công trình, an toàn công nghệ LNG và thủ tục PCCC tương ứng; tránh hỏi duy nhất “đã có thẩm duyệt PCCC chưa?”.",
+      "steps": [
+        "Thu thập danh mục công trình, công năng, thiết kế sơ bộ, phân nhóm và đề xuất áp dụng tiêu chuẩn/qui chuẩn.",
+        "Làm việc với Legal, thiết kế, tư vấn PCCC xác định nghĩa vụ thẩm định thiết kế, cơ quan có thẩm quyền và thời điểm cần hoàn tất theo luật 2024 đã sửa đổi.",
+        "Tổ chức danh mục deliverable về phân khu cháy, thoát nạn, phòng cháy, hệ thống phát hiện/chữa cháy, tiếp cận chữa cháy và giao diện công nghệ.",
+        "Đối chiếu rủi ro LNG đặc thù với các tiêu chuẩn được dự án lựa chọn, tránh dùng QCVN 06 để thay thế yêu cầu LNG chuyên ngành.",
+        "Theo dõi comment/thẩm định/kiểm tra nghiệm thu theo từng giai đoạn, không mặc định HSE Manager là người ký duyệt thiết kế."
+      ],
+      "inputs": [
+        "Building list",
+        "Concept design",
+        "Fire philosophy",
+        "Phân quyền chủ đầu tư"
+      ],
+      "outputs": [
+        "Fire Approval / Design Compliance Matrix",
+        "PCCC interface log",
+        "Danh mục nguồn lực và kiểm tra"
+      ],
+      "accept": [
+        "Rõ hạng mục nào áp dụng thủ tục nào",
+        "Thẩm quyền được xác minh",
+        "Báo cáo không lẫn nghĩa vụ pháp lý với GIIP"
+      ],
+      "red": [
+        "Gọi mọi thủ tục là “thẩm duyệt” theo luật cũ",
+        "Coi HSE tự phê duyệt thiết kế PCCC",
+        "Bỏ sót giao diện hệ thống khí/cháy"
+      ],
+      "refs": [
+        "PCCC",
+        "ND105",
+        "Q06",
+        "NFPA59A",
+        "IFCLNG",
+        "Q19",
+        "ND347"
+      ],
+      "partners": "Fire engineer, Legal, Design manager, PM",
+      "example": "Ví dụ: Nhà điều khiển và kho LNG có các yêu cầu an toàn cháy khác nhau; cần xác định chuẩn áp dụng riêng.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P0-06",
+      "phase": "P0",
+      "area": "Địa điểm & cộng đồng",
+      "title": "Quản lý rủi ro mặt bằng, khảo sát, dân cư và giao thông",
+      "goal": "Chủ đầu tư cần kiểm soát an toàn khảo sát và tác động cộng đồng ngay cả trước khi có EPC chính.",
+      "steps": [
+        "Tham gia site walk với khảo sát, pháp lý đất đai, môi trường, chính quyền/đơn vị liên quan nếu phù hợp.",
+        "Lập map các vùng nguy cơ: địa hình, đường dân sinh, lưới điện, công trình ngầm, luồng tàu, thoát lũ, khu dân cư nhạy cảm.",
+        "Xác định trách nhiệm HSE của các nhà thầu khảo sát/giải phóng mặt bằng và yêu cầu phương án trước khi vào hiện trường.",
+        "Thiết lập cơ chế thông tin sự cố cộng đồng, hotline/danh bạ liên hệ chính thức và báo cáo theo trách nhiệm được giao.",
+        "Theo dõi site constraints để đưa vào thiết kế, ĐTM và điều kiện HSMT EPC."
+      ],
+      "inputs": [
+        "Bản đồ vị trí",
+        "Phạm vi GPMB",
+        "Bản vẽ utility",
+        "Danh sách nhà thầu khảo sát"
+      ],
+      "outputs": [
+        "Site HSE Constraints Register",
+        "Community & traffic risk map",
+        "Yêu cầu an toàn cho khảo sát"
+      ],
+      "accept": [
+        "Có bằng chứng kiểm tra tồn tại hiện trường",
+        "Không để khảo sát bắt đầu thiếu kiểm soát",
+        "Giao diện cộng đồng được chuyển cho đơn vị có thẩm quyền xử lý"
+      ],
+      "red": [
+        "Thiếu đánh giá rủi ro giao thông dân sinh",
+        "Khảo sát tại đất chưa được bàn giao hợp lệ",
+        "Không biết bên nào kiểm soát đường tiếp cận"
+      ],
+      "refs": [
+        "MT",
+        "AT",
+        "IFCGEN",
+        "XD",
+        "ND217"
+      ],
+      "partners": "Land, Survey, Community relations, Legal, Environment",
+      "example": "Ví dụ: Xe khảo sát đi qua đường dân sinh hẹp; yêu cầu đánh giá tuyến đường, giờ lưu thông và thông tin cộng đồng.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P0-07",
+      "phase": "P0",
+      "area": "Rủi ro LNG",
+      "title": "Lập Project Major Accident Hazard Register (MAH)",
+      "goal": "LNG cần phân biệt rủi ro tai nạn lao động và sự cố công nghệ có hậu quả lớn.",
+      "steps": [
+        "Họp với process/safety engineering xác định các cấu phần LNG thực tế và danh mục mối nguy hậu quả lớn: mất kín, khí dễ cháy, lạnh sâu, cháy, áp lực, thiếu oxy.",
+        "Đánh dấu ranh giới trách nhiệm của chủ đầu tư, tư vấn và chuyên gia QRA/HAZOP; HSE điều phối và kiểm tra hành động, không tự làm tính toán chuyên sâu.",
+        "Xây bow-tie sơ bộ cho 3–5 top events, liệt kê hàng rào phòng ngừa, giảm thiểu, chủ sở hữu và bằng chứng cần kiểm tra.",
+        "Lập lịch HAZID/HAZOP/QRA và các safety studies theo giai đoạn thiết kế, yêu cầu nhà tư vấn kết luận/khuyến nghị đúng chuyên môn.",
+        "Liên kết các rủi ro trọng yếu với yêu cầu EPC, chiến lược ứng cứu và kế hoạch bảo đảm an toàn thiết kế."
+      ],
+      "inputs": [
+        "PFD/P&ID sơ bộ",
+        "Site layout",
+        "Design basis",
+        "Danh mục hàng rào công nghệ"
+      ],
+      "outputs": [
+        "Major Accident Hazard Register",
+        "Safety study roadmap",
+        "Critical Barrier Register sơ bộ"
+      ],
+      "accept": [
+        "Không đánh đồng TRIR=0 với process safety ổn",
+        "Top events có owner và action",
+        "Review bởi chuyên gia có năng lực"
+      ],
+      "red": [
+        "Chưa xét kịch bản cold burn và vapor cloud",
+        "HAZOP được ký bởi HSE không đủ năng lực",
+        "Hàng rào an toàn không có tiêu chí thử nghiệm"
+      ],
+      "refs": [
+        "IFCLNG",
+        "NFPA59A",
+        "IFCGEN",
+        "Q19",
+        "TC8611"
+      ],
+      "partners": "Process safety specialist, Engineering, Operations future team",
+      "example": "Ví dụ: Một đường xả áp đến vị trí có người thường xuyên làm việc: đánh giá trong thiết kế, không chờ khi công trường đã dựng xong.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P0-08",
+      "phase": "P0",
+      "area": "Thiết kế an toàn",
+      "title": "Khởi tạo Design HSE Review / HAZID và quy trình đóng khuyến nghị",
+      "goal": "Đưa rủi ro ra khỏi thiết kế trước khi thành chi phí sửa công trường.",
+      "steps": [
+        "Yêu cầu Design Manager cung cấp danh sách các cột mốc: concept, FEED, detailed design, IFC, commissioning design.",
+        "Chốt danh sách safety studies cùng các bộ môn: HAZID, HAZOP, QRA, fire & gas mapping, occupied building assessment… chỉ khi áp dụng cho công trình.",
+        "Tổ chức review có facilitator đủ năng lực; HSE theo dõi khuyến nghị với owner, due date, priority và bằng chứng đóng.",
+        "Kiểm tra mọi thay đổi thiết kế tác động hàng rào kiểm soát phải qua MOC và quay lại safety study khi cần.",
+        "Báo cáo những khuyến nghị safety-critical chưa đóng tại các điểm chốt thiết kế."
+      ],
+      "inputs": [
+        "Design review schedule",
+        "P&IDs",
+        "Phân tích rủi ro",
+        "Các tiêu chuẩn được phê duyệt"
+      ],
+      "outputs": [
+        "Design HSE Review Plan",
+        "HAZID/HAZOP action tracker",
+        "Safety-critical open item list"
+      ],
+      "accept": [
+        "Mỗi action có responsible engineering discipline",
+        "Không đóng bằng câu “will consider”",
+        "Tồn tại thiết kế được nêu tại milestone"
+      ],
+      "red": [
+        "HSE tự phê duyệt QRA",
+        "Đóng recommendation không có bằng chứng",
+        "Design freeze khi tồn tại safety critical chưa được quyết định"
+      ],
+      "refs": [
+        "IFCLNG",
+        "NFPA59A",
+        "IOGP",
+        "Q19",
+        "TC8611",
+        "ND217"
+      ],
+      "partners": "Design manager, Process, Independent facilitator, PM",
+      "example": "Ví dụ: HAZID yêu cầu bổ sung điểm tiếp cận xe chữa cháy; anh theo dõi bản vẽ sửa và kết quả review, không tự thiết kế bán kính quay xe.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P0-09",
+      "phase": "P0",
+      "area": "Tổ chức & ngân sách",
+      "title": "Đề xuất HSE Organization & Resource Plan theo rủi ro",
+      "goal": "Thiết kế tổ chức HSE BQLDA theo khối lượng gói thầu, rủi ro, địa điểm và giai đoạn thay vì áp tỷ lệ người cố định.",
+      "steps": [
+        "Lấy tiến độ tổng thể, package strategy, khu vực công trường và forecast peak manpower từ Planning/Construction.",
+        "Phân tầng nguồn lực: HSE BQLDA (assurance và interfaces), EPC (implementation), tư vấn chuyên ngành (PSM/PCCC/Environment/marine).",
+        "Lập năng lực bắt buộc và khung tuyển dụng cho từng vai trò; đặt nhu cầu theo từng mốc huy động thay vì đủ biên chế từ ngày một.",
+        "Dự toán chi phí nhân lực, audit, đào tạo chuyên sâu, nghiên cứu PSM, diễn tập, phương tiện kiểm tra độc lập và dự phòng.",
+        "Trình PM phê duyệt giả định, phạm vi quyền hạn và cơ chế xem xét lại khi thay đổi kế hoạch EPC."
+      ],
+      "inputs": [
+        "Schedule",
+        "Workforce forecast",
+        "Contract strategy",
+        "Risk register"
+      ],
+      "outputs": [
+        "HSE Organization Chart",
+        "Competence Matrix",
+        "Resource & Budget Plan"
+      ],
+      "accept": [
+        "Tách được nhân sự owner vs EPC",
+        "Nguồn lực được liên kết với rủi ro",
+        "Có lịch review ngân sách theo milestone"
+      ],
+      "red": [
+        "Mặc định 1 HSE/50 công nhân cho mọi vai trò",
+        "Thiếu kỹ năng process safety",
+        "Không có năng lực môi trường/cảng khi phạm vi đòi hỏi"
+      ],
+      "refs": [
+        "ND207",
+        "AT",
+        "IOGP",
+        "IFCGEN",
+        "ND212"
+      ],
+      "partners": "HR, Planning, Construction, Cost control, PM",
+      "example": "Ví dụ: Chỉ cần một đầu mối PSM phối hợp tư vấn trong FEED, nhưng cần tăng năng lực Commissioning HSE trước first gas.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P0-10",
+      "phase": "P0",
+      "area": "Rủi ro LNG",
+      "title": "Rà soát tuân thủ QCVN 19:2022/BCT đối với kho LNG trên bờ",
+      "goal": "Khi dự án có kho LNG trên bờ, QCVN 19:2022/BCT là quy chuẩn chuyên ngành phải được đặt đúng vào Design Basis và ma trận tuân thủ; đây là điểm HSE chủ đầu tư không thể chỉ dựa vào IFC hoặc NFPA.",
+      "steps": [
+        "Xác nhận cấu hình dự án: kho LNG trên bờ, bến cập tàu, FSRU, hóa khí tại bờ hay các tổ hợp khác; yêu cầu kỹ thuật mô tả rõ ranh giới.",
+        "Cùng Engineering/Process và Legal lập QCVN 19 applicability memo; xác định phần nào thuộc phạm vi quy chuẩn, phiên bản đang áp dụng, yêu cầu hồ sơ chứng minh.",
+        "Yêu cầu tư vấn lập compliance matrix theo từng điều mục có liên quan: lựa chọn địa điểm, bố trí, thiết kế hệ thống, an toàn, vận hành/bảo dưỡng và các điều kiện chuyên ngành.",
+        "Theo dõi các nghiên cứu địa điểm/khí tượng, nguy cơ ngập, phương án ngăn tràn, khoảng cách an toàn, giao thông/cảng và hàng rào an toàn công nghệ theo thiết kế.",
+        "Tổ chức technical review với người đủ năng lực, ghi deviation/clarification, theo dõi đến khi có biện pháp/kiến nghị rõ và trình chấp thuận theo authority matrix."
+      ],
+      "inputs": [
+        "Plant configuration / Plot plan",
+        "Onshore LNG design basis",
+        "Geotechnical/weather/marine data",
+        "Applicable regulation register"
+      ],
+      "outputs": [
+        "QCVN 19 Applicability & Compliance Matrix",
+        "Design HSE gap list",
+        "Owner assurance note"
+      ],
+      "accept": [
+        "Phạm vi kho trên bờ được xác nhận",
+        "Tài liệu chứng minh tuân thủ có người chịu trách nhiệm",
+        "Deviation được xử lý qua thiết kế/thẩm quyền"
+      ],
+      "red": [
+        "Chỉ áp NFPA/TCVN mà bỏ qua QCVN 19",
+        "Áp QCVN kho trên bờ cho FSRU nổi không đúng phạm vi",
+        "Không có site safety study"
+      ],
+      "refs": [
+        "Q19",
+        "TC8611",
+        "IFCLNG",
+        "NFPA59A"
+      ],
+      "partners": "Engineering, Process, Legal, Design consultant, PSM specialist",
+      "example": "Ví dụ: Dự án chọn FSRU thay vì bồn chứa LNG trên bờ. BQLDA phải đánh giá lại chuẩn áp dụng; không thể copy ma trận QCVN 19 của kho trên bờ sang công trình nổi.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P1-01",
+      "phase": "P1",
+      "area": "Hợp đồng / EPC",
+      "title": "Soạn Employer HSE Requirements đưa vào HSMT",
+      "goal": "Nếu không “đặt hàng” rõ yêu cầu HSE từ đầu, sau này chủ đầu tư khó yêu cầu thực hiện bằng hợp đồng.",
+      "steps": [
+        "Phân loại phạm vi và mối nguy từng gói EPC; lập yêu cầu theo mức rủi ro, không copy chung một gói tài liệu.",
+        "Viết các nhóm điều khoản: HSE leadership, competent personnel, subcontractor management, major hazards, PTW, environmental commitments, emergency, audit, reporting.",
+        "Định nghĩa deliverables cần nộp và mốc: HSE Plan, lifting plan framework, SIMOPS plan, manpower curve, training plan, incident response, bridging.",
+        "Quy định định nghĩa stop-work, cơ chế non-conformance, đóng CAPA, escalation, access audit và yêu cầu chứng cứ; pháp lý/hợp đồng rà soát ngôn ngữ.",
+        "Lập compliance matrix để đánh giá bid và theo dõi sau award; mọi deviation phải được phê duyệt theo thẩm quyền."
+      ],
+      "inputs": [
+        "Project risk register",
+        "Commitments từ ĐTM",
+        "Corporate HSE",
+        "Contract strategy"
+      ],
+      "outputs": [
+        "Employer HSE Requirements",
+        "Tender HSE compliance matrix",
+        "Contract HSE schedule"
+      ],
+      "accept": [
+        "Yêu cầu đo/kiểm tra được",
+        "Không xung đột điều kiện hợp đồng",
+        "Có giao diện trách nhiệm PMU/EPC"
+      ],
+      "red": [
+        "Chỉ yêu cầu “tuân thủ luật” chung chung",
+        "Không có quyền tiếp cận dữ liệu contractor",
+        "Chưa quy định process safety deliverables"
+      ],
+      "refs": [
+        "IOGP",
+        "ND207",
+        "Q18",
+        "IFCLNG",
+        "ND210",
+        "ND217"
+      ],
+      "partners": "Procurement, Contract, Legal, Engineering, PM",
+      "example": "Ví dụ: Yêu cầu EPC trình kế hoạch critical lifts và bằng chứng năng lực được xem xét trước khi huy động.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P1-02",
+      "phase": "P1",
+      "area": "Hợp đồng / EPC",
+      "title": "Xác lập Contract HSE Mode & Bridging Strategy",
+      "goal": "Phải rõ sử dụng hệ thống HSE của ai và các giao diện nào do chủ đầu tư kiểm soát.",
+      "steps": [
+        "Cùng Contract/Engineering xác định mode vận hành theo từng gói: ai điều hành, ai cấp PTW, ai có thẩm quyền giao đất/cấp điện/cho phép giao cắt.",
+        "Lập RACI cho cấp giấy phép, ứng cứu, điều tra, đào tạo induction, chia sẻ dữ liệu, nâng hạ qua ranh giới, xung đột đa EPC.",
+        "Định nghĩa yêu cầu HSE Bridging Document với quy trình dự án và quy trình nhà thầu, kiểm tra điểm bất đồng.",
+        "Dùng interface workshop (owner/EPC/tư vấn/O&M) để xử lý các “gray area” trước huy động.",
+        "Phê duyệt ma trận theo đúng người có thẩm quyền, phát hành cho các nhà thầu và yêu cầu cập nhật khi có gói mới."
+      ],
+      "inputs": [
+        "Hợp đồng dự kiến",
+        "Ranh giới gói",
+        "Authority matrix",
+        "HSE MS của các bên"
+      ],
+      "outputs": [
+        "HSE Bridging Strategy",
+        "Interface Matrix",
+        "Contract mode decision record"
+      ],
+      "accept": [
+        "Ai cấp PTW tại mọi ranh giới được ghi rõ",
+        "Điều phối SIMOPS có người chịu trách nhiệm",
+        "Không có quyền hạn chồng lấn không được xử lý"
+      ],
+      "red": [
+        "EPC A tưởng EPC B kiểm soát khu vực chung",
+        "Không rõ quyền dừng/khởi động lại",
+        "Owner ký permit thay EPC mà không có cơ chế"
+      ],
+      "refs": [
+        "IOGP",
+        "ND207",
+        "ND210"
+      ],
+      "partners": "Contract, Construction, Operations, EPC nominees",
+      "example": "Ví dụ: Điểm đấu nối đường ống do EPC B thi công sang EPC A phải có HSE interface plan được các bên thống nhất.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P1-03",
+      "phase": "P1",
+      "area": "Hợp đồng / EPC",
+      "title": "Đánh giá năng lực HSE nhà thầu tiền sơ tuyển",
+      "goal": "Đánh giá bằng chứng năng lực tương ứng với công việc, không chỉ bằng giấy chứng nhận ISO.",
+      "steps": [
+        "Xây thang điểm theo risk scope: leadership, incident history, training, subcontractor control, critical lifting, process safety, environmental compliance, emergency.",
+        "Yêu cầu hồ sơ: organization chart, key CVs, performance data có giải thích, case study, program audit, sample method statements.",
+        "Tổ chức đánh giá hồ sơ và phỏng vấn/đánh giá thực địa nếu rủi ro cao; ghi cả điểm mạnh, khoảng trống và đề xuất điều kiện.",
+        "Tách tiêu chí loại trừ pháp lý/hợp đồng với điểm đánh giá kỹ thuật; không dùng số liệu tai nạn thấp làm bằng chứng duy nhất.",
+        "Báo cáo khuyến nghị rõ điểm nào bắt buộc đóng trước award và điểm nào giám sát sau award."
+      ],
+      "inputs": [
+        "Tender HSE evaluation criteria",
+        "Bidder documents",
+        "Risk class"
+      ],
+      "outputs": [
+        "Contractor HSE Capability Report",
+        "Deviation/clarification log",
+        "Award-stage conditions"
+      ],
+      "accept": [
+        "Đánh giá có evidence reference",
+        "Rõ tiêu chí điểm và người đánh giá",
+        "Không phê duyệt bidder chỉ vì “ISO 45001”"
+      ],
+      "red": [
+        "Dữ liệu LTI không có phạm vi/giờ làm",
+        "CV mượn nhân sự",
+        "Không thấy kế hoạch quản lý thầu phụ"
+      ],
+      "refs": [
+        "IOGP",
+        "AT",
+        "Q18",
+        "ND212"
+      ],
+      "partners": "Procurement, Contract, Construction, Technical evaluators",
+      "example": "Ví dụ: Nhà thầu có tỷ lệ tai nạn thấp nhưng không có phương pháp đánh giá rủi ro cryogenic; yêu cầu giải trình năng lực chuyên môn.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P1-04",
+      "phase": "P1",
+      "area": "Thiết kế an toàn",
+      "title": "Giám sát HAZOP/QRA/Fire & Gas study với chuyên gia",
+      "goal": "BQLDA HSE quản trị quá trình, chất lượng đầu ra và đóng khuyến nghị; không tự thay chuyên gia thiết kế quyết định an toàn.",
+      "steps": [
+        "Đối chiếu Terms of Reference của từng safety study với phạm vi thiết kế, giai đoạn, đầu vào và năng lực đơn vị chủ trì.",
+        "Kiểm tra quản lý phiên bản P&IDs, assumptions, design basis, dữ liệu site/climate và hiện trạng các khuyến nghị cũ.",
+        "Tham gia workshop để bảo đảm có người đại diện operations, maintenance, fire, HSE, engineering; ghi rõ owner của từng action.",
+        "Theo dõi đóng action theo severity; yêu cầu engineering xác nhận bằng bằng chứng thay đổi thiết kế hoặc lý do chấp nhận rủi ro đã phê duyệt.",
+        "Báo cáo PM những tồn tại safety critical cần giữ gate; không ký kết luận kỹ thuật vượt năng lực/ủy quyền."
+      ],
+      "inputs": [
+        "Design basis",
+        "PFD/P&IDs",
+        "Study ToR",
+        "Layout & design assumptions"
+      ],
+      "outputs": [
+        "Safety study tracker",
+        "Action register",
+        "Report on unresolved critical barriers"
+      ],
+      "accept": [
+        "Các study được làm đúng thời điểm",
+        "Mọi action có owner",
+        "Không bỏ sót MOC sau thay đổi"
+      ],
+      "red": [
+        "Vội đóng HAZOP khi design đổi",
+        "QRA do cá nhân không đủ chuyên môn phê duyệt",
+        "Không có monitoring of recommendations"
+      ],
+      "refs": [
+        "IFCLNG",
+        "NFPA59A",
+        "Q19",
+        "TC8611",
+        "ND217"
+      ],
+      "partners": "Process safety lead, Engineering, Fire engineer, Consultant",
+      "example": "Ví dụ: QRA cho thấy một khu vực chịu ảnh hưởng vượt giả định; engineering phải đề xuất biện pháp và tái đánh giá, HSE theo dõi bằng chứng.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P1-05",
+      "phase": "P1",
+      "area": "Hợp đồng / EPC",
+      "title": "Bảo đảm các cam kết ĐTM/PCCC chuyển thành yêu cầu hợp đồng",
+      "goal": "Không để trách nhiệm pháp lý phía chủ đầu tư rơi vào khoảng trống giữa Legal, tư vấn thiết kế và EPC.",
+      "steps": [
+        "Trích các cam kết, điều kiện và biện pháp quản lý từ quyết định/hồ sơ môi trường đã được xác nhận.",
+        "Map từng cam kết sang gói thầu, thiết kế, BOQ, phương án quản lý, đơn vị giám sát và phương pháp nghiệm thu.",
+        "Làm tương tự với các đầu việc PCCC/chống cháy: thiết kế được rà soát, kiểm tra, thử nghiệm và bàn giao.",
+        "Soát hợp đồng với Legal để có đủ quyền yêu cầu EPC xuất trình hồ sơ, đo đạc và khắc phục.",
+        "Duy trì commitments register và báo cáo khoảng trống hợp đồng trước award."
+      ],
+      "inputs": [
+        "EIA commitment register",
+        "PCCC design requirements",
+        "Contract packages"
+      ],
+      "outputs": [
+        "Contractual HSE commitments matrix",
+        "Design/procurement traceability list"
+      ],
+      "accept": [
+        "Không có cam kết “mồ côi”",
+        "Mọi yêu cầu có nơi kiểm chứng",
+        "Không nhầm chủ thể ký nộp hồ sơ với EPC thực hiện"
+      ],
+      "red": [
+        "Cam kết khí thải/nước thải không có ngân sách",
+        "Yêu cầu chưa đưa vào phạm vi EPC",
+        "PCCC yêu cầu thử nghiệm thiếu đầu mối"
+      ],
+      "refs": [
+        "MT",
+        "ND08",
+        "ND48",
+        "PCCC",
+        "ND105",
+        "IOGP",
+        "Q19",
+        "L146",
+        "ND347",
+        "ND210"
+      ],
+      "partners": "Environment, Fire, Legal, Procurement, Engineering",
+      "example": "Ví dụ: ĐTM yêu cầu quan trắc trong thi công nhưng hợp đồng EPC không ghi ai thực hiện và ai trả chi phí.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P1-06",
+      "phase": "P1",
+      "area": "Lãnh đạo & tổ chức",
+      "title": "Thiết lập KPI, cơ chế báo cáo và kế hoạch HSE assurance",
+      "goal": "Chủ đầu tư cần hệ thống nhìn ra mức độ kiểm soát rủi ro, thay vì chỉ đếm số toolbox và mũ bảo hộ.",
+      "steps": [
+        "Phân biệt leading indicators (critical control verification, overdue high-risk action, competence coverage, PTW assurance) với lagging (incident, LTI).",
+        "Xác định reporting protocol, định nghĩa chỉ số, cách tính, chủ sở hữu số liệu và cơ chế xác minh.",
+        "Thiết lập assurance calendar: audit hệ thống, kiểm tra rủi ro trọng yếu, drill observation, design action close-out, environmental verification.",
+        "Xây escalation threshold và báo cáo quyết định cho PM: action high priority quá hạn, barrier failure, repeated breach, giao diện đa EPC.",
+        "Thống nhất nội dung đưa vào hợp đồng và dashboard, thử chạy với dữ liệu mô phỏng."
+      ],
+      "inputs": [
+        "Risk register",
+        "Project reporting rules",
+        "Employer requirements"
+      ],
+      "outputs": [
+        "Owner HSE KPI Dictionary",
+        "Assurance Plan",
+        "Weekly management report template"
+      ],
+      "accept": [
+        "Chỉ số có định nghĩa và bằng chứng",
+        "Phản ánh chất lượng controls",
+        "Có cơ chế kiểm tra dữ liệu từ EPC"
+      ],
+      "red": [
+        "KPI chỉ đếm số mũ/giờ an toàn",
+        "Số liệu thiếu denominator",
+        "Không có trigger escalation"
+      ],
+      "refs": [
+        "IOGP",
+        "IFCGEN",
+        "ND207"
+      ],
+      "partners": "PM, Planning, EPC bidder, HSE Team",
+      "example": "Ví dụ: 100% PTW được phát hành không có nghĩa là an toàn; chỉ số cần kiểm chứng đúng điều kiện hiện trường.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P1-07",
+      "phase": "P1",
+      "area": "Rủi ro LNG",
+      "title": "Đặt yêu cầu HSE cho thiết kế kho – cảng – giao nhận LNG",
+      "goal": "Giao diện tàu – bờ chứa rủi ro công nghệ, hàng hải và nhiều hợp đồng. HSE chủ đầu tư phải bảo đảm có một đầu mối điều phối đầy đủ.",
+      "steps": [
+        "Xác định ai sở hữu bến LNG, hệ thống cần xuất nhập, tuyến LNG và hơi hồi lưu, điều kiện lai dắt/neo đậu và phương án cứu nạn.",
+        "Yêu cầu Engineering/Marine review tiêu chuẩn TCVN 8611, 8612, 8613 (ấn bản 2023) và các quy chuẩn VN bắt buộc thuộc phạm vi áp dụng; lưu lại danh mục áp dụng được phê duyệt.",
+        "Thiết lập interface matrix gồm ship–shore communications, ESD link, mooring, weather limits, exclusion zones, cargo transfer, emergency và permit authority.",
+        "Đưa các yêu cầu kiểm tra thiết kế, FAT/SAT, thử nghiệm cần xuất nhập và đào tạo năng lực vào hồ sơ mời thầu/hợp đồng có liên quan.",
+        "Tham dự design review với marine/process/fire và legal; HSE ghi nhận khoảng trống, chủ trì action tracking, không tự phê duyệt tính toán thiết kế."
+      ],
+      "inputs": [
+        "Marine/port concept",
+        "P&ID/boundary",
+        "HSE design criteria",
+        "Contract packages"
+      ],
+      "outputs": [
+        "LNG Port & Ship-shore HSE Interface Matrix",
+        "Design review actions",
+        "Contract HSE requirements for LNG transfer"
+      ],
+      "accept": [
+        "Không bỏ sót đầu mối công trình cảng",
+        "Có standards applicability register",
+        "ESD/communication/test interfaces có owner"
+      ],
+      "red": [
+        "Bỏ trống trách nhiệm giữa operator cảng và LNG terminal",
+        "Tham chiếu TCVN bản 2010 đã bị thay",
+        "Không có kiểm soát chuyển giao tàu–bờ"
+      ],
+      "refs": [
+        "Q19",
+        "TC8611",
+        "TC8612",
+        "TC8613",
+        "IFCLNG"
+      ],
+      "partners": "Marine engineer, Port operator, Process, E&I, Fire, Legal",
+      "example": "Ví dụ: Cầu LNG có cần xuất nhập nhưng hợp đồng không quy định bên nào thực hiện kiểm thử ESD ship-to-shore; phát hiện sớm trước award.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P2-01",
+      "phase": "P2",
+      "area": "Huy động",
+      "title": "Pre-mobilization HSE Readiness Review cho EPC",
+      "goal": "Trước khi EPC vào công trường, chủ đầu tư phải kiểm chứng điều kiện hệ thống, nguồn lực và điều kiện cho phép bắt đầu công việc.",
+      "steps": [
+        "Yêu cầu EPC cung cấp HSE Plan, organization/competence, induction, emergency, risk register, thiết bị, các hồ sơ bảo hiểm/kiểm định liên quan.",
+        "Lập danh sách điều kiện theo loại công việc và milestone, tách must-close trước huy động với tồn tại theo dõi sau.",
+        "Họp review liên chức năng HSE–Construction–Contract–Environment–Fire; xác nhận hợp đồng quy định tài liệu cần chấp thuận thế nào.",
+        "Thực hiện site readiness verification: khu tiếp cận, rào chắn, điều phối giao thông, y tế/ứng cứu, điện tạm và công trình tạm.",
+        "Trình người có thẩm quyền quyết định go/no-go cho từng phạm vi; phát hành action register, không đánh đồng “nhận tài liệu” với “đạt yêu cầu”."
+      ],
+      "inputs": [
+        "Approved scope",
+        "EPC documents",
+        "Legal milestones",
+        "Site handover"
+      ],
+      "outputs": [
+        "Readiness Review Report",
+        "Conditional go/no-go decision log",
+        "Mobilization open items"
+      ],
+      "accept": [
+        "Mandatory blockers được đóng",
+        "Site & paperwork khớp",
+        "Approval đúng phân quyền"
+      ],
+      "red": [
+        "Huy động 500 người trước khi ứng cứu sẵn sàng",
+        "HSE Plan chưa chấp thuận theo hợp đồng",
+        "Nhân sự trong hồ sơ khác người có mặt"
+      ],
+      "refs": [
+        "ND207",
+        "Q18",
+        "AT",
+        "ND44",
+        "IOGP",
+        "ND212",
+        "TT32"
+      ],
+      "partners": "Construction, Contract, EPC HSE, Medical, Fire, PM",
+      "example": "Ví dụ: EPC đủ PPE nhưng chưa có phương án cứu hộ làm việc trên cao; không cho triển khai hạng mục có rủi ro tương ứng.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P2-02",
+      "phase": "P2",
+      "area": "Huy động",
+      "title": "Đánh giá Project HSE Plan và Bridging của EPC",
+      "goal": "HSE BQLDA phải kiểm tra HSE Plan có thực thi được, không chỉ có mục lục đầy đủ.",
+      "steps": [
+        "Đối chiếu kế hoạch EPC với Employer Requirements và risk profile thực tế; yêu cầu compliance matrix theo từng điều khoản.",
+        "Kiểm tra vai trò tuyến chỉ huy của EPC, mức hỗ trợ của HSE, subcontractor management, emergency, reporting, PTW, SIMOPS, environment.",
+        "Kiểm tra quy trình cụ thể: ai phát hành permit, ai lập JSA, ai nghiệm thu kiểm soát, ai lưu evidence, ai chấp thuận theo delegation.",
+        "Mở review comment register có severity, owner, due; làm workshop giải quyết xung đột hệ thống BQLDA–EPC.",
+        "Trình người có thẩm quyền chấp thuận/ghi nhận theo hợp đồng; yêu cầu EPC đào tạo triển khai và kiểm chứng phiên bản ngoài hiện trường."
+      ],
+      "inputs": [
+        "EPC HSE Plan",
+        "Employer Requirements",
+        "Bridging draft",
+        "Org chart"
+      ],
+      "outputs": [
+        "HSE Plan review record",
+        "HSE Bridging Document",
+        "Comment closure report"
+      ],
+      "accept": [
+        "Mapping được đến từng yêu cầu HSE hợp đồng",
+        "Đội thi công hiểu thực tế",
+        "Hệ thống giám sát đo được"
+      ],
+      "red": [
+        "Chỉ ký trang bìa mà không có review",
+        "Chồng chéo PTW",
+        "EPC HSE làm thay trách nhiệm kỹ thuật"
+      ],
+      "refs": [
+        "ND207",
+        "Q18",
+        "IOGP",
+        "ND210"
+      ],
+      "partners": "EPC Construction, EPC HSE, Contract, PM",
+      "example": "Ví dụ: HSE Plan ghi EPC cấp PTW nhưng khu vực do O&M kiểm soát: phải làm rõ trước khi cấp permit.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P2-03",
+      "phase": "P2",
+      "area": "An toàn thi công",
+      "title": "Thiết kế chiến lược kiểm chứng Critical Controls",
+      "goal": "HSE BQLDA không đi kiểm tra mọi thao tác, mà chọn mẫu độc lập nơi rủi ro nghiêm trọng có thể vượt hàng rào.",
+      "steps": [
+        "Phân loại các công việc high-risk: lifting, excavation, energized work, working at height, pressure test, confined space, hot work, marine interface.",
+        "Cho mỗi loại xác định 3–7 critical controls phải có; làm việc với EPC và engineering để thống nhất tiêu chí quan sát/bằng chứng.",
+        "Lập lịch kiểm tra theo rủi ro, thay đổi, sự cố, nhà thầu mới và hoạt động đồng thời; không dùng lịch cứng thuần túy.",
+        "Ghi nhận failure, yêu cầu EPC dừng/khắc phục theo thẩm quyền; xác minh controls hoạt động trước khi khuyến nghị tiếp tục.",
+        "Tổng hợp xu hướng barrier failures, xác định vấn đề hệ thống và báo cáo PM."
+      ],
+      "inputs": [
+        "Construction 3-week lookahead",
+        "HSE risk register",
+        "Method statements",
+        "Contract requirements"
+      ],
+      "outputs": [
+        "Critical Control Verification Plan",
+        "Field Verification Log",
+        "Barrier failure trend"
+      ],
+      "accept": [
+        "Có tiêu chí kiểm tra cụ thể",
+        "Tập trung vào hậu quả nghiêm trọng",
+        "Đóng action bằng kiểm chứng độc lập khi cần"
+      ],
+      "red": [
+        "Chỉ kiểm PPE",
+        "Kiểm tra văn phòng thay cho hiện trường",
+        "Không điều tra repeated failure"
+      ],
+      "refs": [
+        "ND207",
+        "Q18",
+        "AT",
+        "IFCGEN"
+      ],
+      "partners": "Construction, EPC HSE, Engineering, Supervisors",
+      "example": "Ví dụ: Kế hoạch nâng hạ đã ký nhưng nền kê cẩu sau mưa bị biến dạng; anh yêu cầu kiểm chứng trạng thái thực tế.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P2-04",
+      "phase": "P2",
+      "area": "An toàn thi công",
+      "title": "Quản trị PTW và SIMOPS giữa các EPC",
+      "goal": "Xung đột công việc đa EPC là trách nhiệm quản trị cấp dự án, không thể bỏ mặc các nhà thầu tự giải quyết.",
+      "steps": [
+        "Lập bản đồ area ownership và permit authority theo khu vực/gói thầu, xác định hệ thống PTW nào áp dụng.",
+        "Yêu cầu EPC cập nhật kế hoạch 3 tuần và daily high-risk activities; tìm giao cắt không gian, thời gian, năng lượng và giao thông.",
+        "Khi có giao diện, tổ chức SIMOPS meeting với engineering/construction và các EPC, phân loại cấm đồng thời, tách lịch hoặc bổ sung controls.",
+        "Xác định một người điều phối chịu trách nhiệm closing decision, các bên chấp thuận thao tác trong phạm vi quyền hạn và thể hiện trên sơ đồ work zone.",
+        "Sau thi công kiểm tra lessons, cập nhật interface register/permit matrix."
+      ],
+      "inputs": [
+        "Area ownership map",
+        "EPC work plans",
+        "PTW matrix",
+        "Interface register"
+      ],
+      "outputs": [
+        "SIMOPS plan",
+        "Daily conflict report",
+        "Joint coordination minutes"
+      ],
+      "accept": [
+        "Không còn vùng vô chủ",
+        "Không có hai permit xung đột",
+        "Quyết định giao diện có người chịu trách nhiệm"
+      ],
+      "red": [
+        "EPC A nâng cẩu trong tuyến vận tải EPC B",
+        "Điện đã cấp nhưng bên khác tưởng de-energized",
+        "Không rõ ai gọi emergency"
+      ],
+      "refs": [
+        "ND207",
+        "Q18",
+        "IOGP",
+        "IFCGEN"
+      ],
+      "partners": "Construction, Operations, EPC A/B, Permit authority",
+      "example": "Ví dụ: Một EPC nâng turbine, EPC khác thử áp bên cạnh. Anh điều phối vùng cấm và lịch, không tự viết JSA cho cả hai EPC.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P2-05",
+      "phase": "P2",
+      "area": "An toàn thi công",
+      "title": "Kiểm soát các ca nâng hạ nặng và lắp đặt thiết bị",
+      "goal": "Làm rõ mức can thiệp của owner đối với critical lifting mà không chiếm vai trò thiết kế phương án của EPC.",
+      "steps": [
+        "Theo contract, xác định hoạt động nâng nào cần prior notification/hold point/independent review.",
+        "Kiểm tra bằng chứng: lifting plan của người có năng lực, cẩu và phụ kiện hợp lệ, địa chất/nền, khoảng cách điện, thời tiết, rigger/signalman.",
+        "Dùng field verification ngẫu nhiên tại hold point: vị trí cẩu, vùng cấm, communication, exclusion zone, đổi tải hoặc đổi thiết bị.",
+        "Nếu điều kiện khác bản vẽ/phương án, yêu cầu EPC đánh giá lại, dừng công việc có nguy cơ theo thẩm quyền và ghi barrier failure.",
+        "Tổng kết học kinh nghiệm và yêu cầu lan tỏa biện pháp sang các gói khác."
+      ],
+      "inputs": [
+        "Critical lift register",
+        "Approved contract acceptance gates",
+        "Lifting plan",
+        "Ground bearing checks"
+      ],
+      "outputs": [
+        "Owner lifting assurance log",
+        "Non-conformance record",
+        "Corrective action evidence"
+      ],
+      "accept": [
+        "EPC tự chịu trách nhiệm engineering lift",
+        "BQLDA có bằng chứng kiểm chứng",
+        "Quyết định dừng/khởi động lại đúng thẩm quyền"
+      ],
+      "red": [
+        "Lifting plan không xem nền đặt cẩu",
+        "Điều kiện gió vượt giới hạn của phương án",
+        "Thay cẩu không có reassessment"
+      ],
+      "refs": [
+        "Q18",
+        "ND207",
+        "AT"
+      ],
+      "partners": "EPC lifting engineer, Construction, Geotechnical, HSE",
+      "example": "Ví dụ: Cẩu 300 tấn chỉ là ví dụ; trọng lượng thiết bị LNG Nghi Sơn phải xác nhận từ hồ sơ thực tế.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P2-06",
+      "phase": "P2",
+      "area": "Môi trường",
+      "title": "Assurance các cam kết ĐTM và quản lý phát thải thi công",
+      "goal": "Không chỉ nhận số liệu môi trường từ EPC; chủ đầu tư phải kiểm soát sự phù hợp với nghĩa vụ áp dụng.",
+      "steps": [
+        "Chuyển từng cam kết ĐTM, điều kiện môi trường và nội dung hợp đồng thành compliance checklist theo vị trí, thời điểm.",
+        "Kiểm tra kế hoạch EPC cho bụi, ồn, thoát nước mưa, nước thải, chất thải, vật liệu nguy hại, tràn dầu và giao thông.",
+        "Rà soát hồ sơ quan trắc: đối tượng, phương pháp, tần suất, năng lực đơn vị, kết quả bất thường và biện pháp phản ứng.",
+        "Đi hiện trường kiểm tra khu lưu giữ chất thải, silt traps, drainage, chemical storage và khu nhạy cảm.",
+        "Ghi vi phạm/khắc phục, thông báo đúng tuyến, đánh giá có cần điều chỉnh biện pháp/hồ sơ theo pháp luật không."
+      ],
+      "inputs": [
+        "EIA approval/commitments",
+        "Construction EMP",
+        "Monitoring records",
+        "Waste agreements"
+      ],
+      "outputs": [
+        "Environmental assurance log",
+        "Compliance deviation tracker",
+        "Monthly environmental report"
+      ],
+      "accept": [
+        "Nghĩa vụ có hồ sơ và bằng chứng",
+        "Sai lệch được điều tra và báo cáo đúng quy trình",
+        "Biện pháp kiểm soát thực tế tồn tại"
+      ],
+      "red": [
+        "Hồ sơ quan trắc tốt nhưng ngoài hiện trường xả bừa",
+        "Không xét thoát nước khi mưa lớn",
+        "EPC thuê phụ đơn vị xử lý không đủ điều kiện"
+      ],
+      "refs": [
+        "MT",
+        "ND08",
+        "ND05",
+        "ND48",
+        "IFCGEN",
+        "L146"
+      ],
+      "partners": "Environment, EPC, Consultant, Legal",
+      "example": "Ví dụ: Mưa lớn làm nước bùn tràn ra đường dân sinh; chủ đầu tư yêu cầu EPC khắc phục và xem lại thiết kế thoát nước tạm.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P2-07",
+      "phase": "P2",
+      "area": "Năng lực & nhân sự",
+      "title": "Assurance huấn luyện, sức khỏe, thiết bị và nhà thầu phụ",
+      "goal": "Chủ đầu tư xác minh năng lực, không trực tiếp cấp phát PPE hoặc huấn luyện pháp định cho lao động của EPC.",
+      "steps": [
+        "Kiểm tra EPC đã có quy trình xác minh kỹ năng, huấn luyện pháp định và induction cho từng nhóm công việc.",
+        "Lấy mẫu hồ sơ người vận hành thiết bị nâng/áp lực, thợ điện, công việc nguy hiểm, năng lực quản lý HSE để đối chiếu người thật.",
+        "Đối chiếu tình trạng kiểm định thiết bị theo danh mục bắt buộc áp dụng và kế hoạch bảo dưỡng, tagging, kiểm tra trước ca.",
+        "Đánh giá nhà thầu phụ: EPC có prequalification, onboarding, kiểm tra và phản hồi vi phạm hay không.",
+        "Khi phát hiện hồ sơ không hợp lệ, yêu cầu EPC cách ly người/thiết bị khỏi công việc có liên quan theo quy trình, theo dõi CAPA."
+      ],
+      "inputs": [
+        "Manpower list",
+        "Training certificates",
+        "Equipment register",
+        "Subcontractor approval"
+      ],
+      "outputs": [
+        "Competence assurance sample log",
+        "Equipment verification log",
+        "Contractor onboarding audit"
+      ],
+      "accept": [
+        "Mẫu kiểm tra có căn cứ",
+        "Chỉ người/thiết bị đủ điều kiện được tham gia",
+        "EPC chịu trách nhiệm chính hệ thống quản lý lao động"
+      ],
+      "red": [
+        "Giấy tờ người khác",
+        "Thiết bị hết hạn kiểm định",
+        "Nhà thầu phụ chưa qua induction"
+      ],
+      "refs": [
+        "AT",
+        "ND44",
+        "Q18",
+        "IOGP"
+      ],
+      "partners": "EPC HR/HSE, Mechanical, Construction, Subcontractors",
+      "example": "Ví dụ: Chứng chỉ đào tạo còn hiệu lực nhưng công nhân không biết quy trình cô lập điện tại vị trí làm việc; cần đánh giá năng lực thực tế.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P2-08",
+      "phase": "P2",
+      "area": "Assurance & báo cáo",
+      "title": "Audit EPC, NCR, CAPA và escalation",
+      "goal": "HSE BQLDA cần cơ chế buộc hệ thống EPC cải tiến, chứ không chỉ lập biên bản vi phạm cá nhân.",
+      "steps": [
+        "Lập audit schedule dựa trên rủi ro, lịch thi công, kết quả sự cố và tình trạng nhà thầu; công bố tiêu chí kiểm tra.",
+        "Audit qua phỏng vấn tuyến chỉ huy, đối chiếu hồ sơ với hiện trường và chọn mẫu theo critical controls.",
+        "Ghi NCR nêu đúng yêu cầu/căn cứ bị vi phạm, bằng chứng quan sát, rủi ro, người chịu trách nhiệm và hạn.",
+        "Yêu cầu EPC lập root cause analysis đối với lỗi hệ thống, CAPA phù hợp, bằng chứng khắc phục/khắc phục phòng ngừa.",
+        "Xác minh hiệu lực sau đóng; báo cáo overdue critical actions và escalation đến PM/theo hợp đồng."
+      ],
+      "inputs": [
+        "EPC HSE Plan",
+        "Contract HSE requirements",
+        "Risk register",
+        "Past NCR"
+      ],
+      "outputs": [
+        "Audit report",
+        "NCR/CAPA tracker",
+        "Management escalation note"
+      ],
+      "accept": [
+        "NCR traceable to requirement",
+        "RCA giải quyết hệ thống",
+        "Đã kiểm chứng hiệu quả chứ không chỉ nhận thư cam kết"
+      ],
+      "red": [
+        "Đóng lỗi bằng ảnh chụp không liên quan",
+        "Overdue critical > deadline không được escalated",
+        "Mọi lỗi chỉ đổ cho công nhân"
+      ],
+      "refs": [
+        "ND207",
+        "IOGP",
+        "Q18",
+        "ND210"
+      ],
+      "partners": "EPC management, PM, Contract, Construction",
+      "example": "Ví dụ: Có 5 lỗi rào chắn trong 1 tháng; phải xem nguyên nhân năng lực quản lý, vật tư và giám sát, không chỉ phạt 5 công nhân.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P2-09",
+      "phase": "P2",
+      "area": "Sự cố & khủng hoảng",
+      "title": "Quản lý sự cố nghiêm trọng và điều tra theo thẩm quyền",
+      "goal": "An toàn con người và nghĩa vụ pháp lý là ưu tiên đầu tiên; điều tra nội bộ không thay thế điều tra theo luật.",
+      "steps": [
+        "Khi có sự cố: kích hoạt ứng cứu, bảo vệ người bị nạn, hạn chế nguy cơ thứ cấp, bảo vệ hiện trường theo pháp luật và chỉ đạo ứng cứu.",
+        "Phối hợp EPC, lãnh đạo và Legal xác định nghĩa vụ báo cáo, cơ quan/đơn vị có thẩm quyền; không tự đặt thời hạn luật định bằng SLA nội bộ.",
+        "Xác lập đầu mối điều phối truyền thông và dữ liệu, bảo vệ bằng chứng, danh mục nhân chứng/camera/biên bản; tách thông tin đã xác minh với giả định.",
+        "Tham gia điều tra nội bộ theo phân công, kiểm tra nguyên nhân gốc và các điểm hệ thống/hàng rào thất bại.",
+        "Xem xét các gói khác có nguy cơ tương tự; quản lý corrective actions và kiến nghị điều kiện resume sau sự cố theo phân quyền."
+      ],
+      "inputs": [
+        "Emergency plan",
+        "Incident reporting protocol",
+        "Authority matrix",
+        "Contact list"
+      ],
+      "outputs": [
+        "Incident chronology",
+        "Legal reporting log",
+        "Investigation/CAPA & cross-site learning"
+      ],
+      "accept": [
+        "Không trì hoãn cứu nạn vì thủ tục",
+        "Thông tin pháp lý theo đúng chủ thể/thẩm quyền",
+        "Kết luận có bằng chứng"
+      ],
+      "red": [
+        "HSE tự tuyên bố nguyên nhân khi chưa điều tra",
+        "Di chuyển hiện trường tùy tiện",
+        "Chỉ tập trung lỗi nạn nhân"
+      ],
+      "refs": [
+        "AT",
+        "ND207",
+        "Q18",
+        "PCCC"
+      ],
+      "partners": "EPC Incident Commander, Legal, PM, Emergency services",
+      "example": "Ví dụ: Tai nạn làm việc trên cao: EPC ứng cứu tại chỗ; chủ đầu tư điều phối nghĩa vụ, giám sát điều tra, xem nguy cơ tương tự ở các EPC khác.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P2-10",
+      "phase": "P2",
+      "area": "Assurance & báo cáo",
+      "title": "Điều hành weekly HSE management review cấp BQLDA",
+      "goal": "Báo cáo để Giám đốc dự án ra quyết định, không chỉ tổng hợp các con số hoạt động.",
+      "steps": [
+        "Yêu cầu EPC gửi dữ liệu theo KPI dictionary: work hours, high-risk work, critical control assurance, incidents, overdue NCR, environment.",
+        "Dữ liệu HSE BQLDA kiểm tra mẫu, xác định xu hướng thất bại hàng rào và khả năng ảnh hưởng đến tiến độ.",
+        "Xây top-5 management risk với risk owner, hiện trạng, mốc cần quyết định và ảnh hưởng còn lại.",
+        "Tổ chức họp PM–Construction–EPC: quyết định nguồn lực, re-sequence, hold points, escalation hợp đồng, truyền thông.",
+        "Phát hành biên bản với action owner/deadline, theo dõi đến lần họp sau và report status trung thực."
+      ],
+      "inputs": [
+        "EPC dashboard",
+        "NCR tracker",
+        "Legal register",
+        "3-week lookahead"
+      ],
+      "outputs": [
+        "Weekly HSE Assurance Report",
+        "Decision log",
+        "Action tracker"
+      ],
+      "accept": [
+        "Management actions rõ người rõ hạn",
+        "KPI có dữ liệu thô truy vết",
+        "Những rủi ro trọng yếu được ưu tiên"
+      ],
+      "red": [
+        "0 LTI nhưng nhiều critical control failure",
+        "Không có owner cho quyết định",
+        "Báo cáo chỉ đẹp màu"
+      ],
+      "refs": [
+        "IOGP",
+        "ND207",
+        "IFCGEN"
+      ],
+      "partners": "PM, EPC Managers, Construction, Planning",
+      "example": "Ví dụ: 3 tuần liên tiếp PTW audit thấp ở gói điện, đề xuất tăng engineering supervision hoặc điều chỉnh sequencing.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P3-01",
+      "phase": "P3",
+      "area": "An toàn công nghệ",
+      "title": "Xây dựng/kiểm chứng hàng rào Process Safety và chuẩn bị commissioning",
+      "goal": "Dự án chuyển từ rủi ro xây lắp sang rủi ro năng lượng và chất nguy hiểm; cần quản lý hàng rào vận hành.",
+      "steps": [
+        "Lập Process Safety Critical Element register với đội công nghệ và O&M tương lai: ESD, fire&gas, relief, containment, alarm, interlocks.",
+        "Xem requirement thiết kế, FAT/SAT, pre-commissioning tests, inspection records và điều kiện commissioning theo hệ thống.",
+        "Phân định trách nhiệm EPC/commissioning/O&M cho cô lập năng lượng, đánh dấu thiết bị, lưu giữ vật tư nguy hiểm, nhập khí.",
+        "Lập kế hoạch field verification cho những barrier quan trọng nhất; chuyên gia kỹ thuật xác nhận tính đúng đắn của phép thử.",
+        "Escalate tồn tại safety critical chưa đóng trước mốc áp năng lượng/khí."
+      ],
+      "inputs": [
+        "Cause & effect",
+        "Safety studies",
+        "Barrier list",
+        "Commissioning plan"
+      ],
+      "outputs": [
+        "Safety critical barrier status",
+        "Owner assurance report",
+        "Unresolved critical item list"
+      ],
+      "accept": [
+        "Hàng rào có thiết kế/test evidence",
+        "Không nhầm hoàn thành cơ khí với sẵn sàng vận hành",
+        "Tồn tại trọng yếu được quyết định đúng cấp"
+      ],
+      "red": [
+        "Chưa kiểm tra interlock nhưng tuyên bố sẵn sàng",
+        "Hàng rào bypass không có kiểm soát",
+        "Lấy thống kê LTI làm chỉ dấu PSM"
+      ],
+      "refs": [
+        "IFCLNG",
+        "NFPA59A",
+        "IFCGEN",
+        "Q19",
+        "TC8611"
+      ],
+      "partners": "Process safety, EPC Commissioning, Engineering, O&M",
+      "example": "Ví dụ: ESD valve chưa hoàn thành functional test; không thể suy ra hệ thống an toàn chỉ vì piping pressure test đạt.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P3-02",
+      "phase": "P3",
+      "area": "An toàn công nghệ",
+      "title": "Giám sát Management of Change (MOC) giai đoạn chạy thử",
+      "goal": "Thay đổi nhỏ khi commissioning có thể làm mất hàng rào an toàn đã được đánh giá trong thiết kế.",
+      "steps": [
+        "Xác lập các trigger MOC: thay đổi vật tư/đường ống, logic alarm, bypass, thiết bị, chế độ vận hành, phân quyền.",
+        "Với mỗi thay đổi, yêu cầu đánh giá ảnh hưởng đến safety studies, quy trình vận hành, PCCC, môi trường và đào tạo.",
+        "Chỉ chấp thuận theo authority matrix; HSE kiểm soát quá trình, engineering/operations chịu trách nhiệm kỹ thuật.",
+        "Theo dõi closure, cập nhật as-built, procedure, training và critical barrier register.",
+        "Không cho phép dùng “temporary change” vô thời hạn thiếu người chịu trách nhiệm và kiểm soát."
+      ],
+      "inputs": [
+        "MOC procedure",
+        "Design deviations",
+        "P&ID as-built",
+        "Operations procedures"
+      ],
+      "outputs": [
+        "MOC Register",
+        "Safety impact screening",
+        "Closure evidence"
+      ],
+      "accept": [
+        "Mọi change có risk review",
+        "Đúng người ký",
+        "Không còn temporary bypass không kiểm soát"
+      ],
+      "red": [
+        "Bypass detector không thông báo",
+        "Sửa logic PLC không HAZOP impact review",
+        "Thay đổi không cập nhật vận hành"
+      ],
+      "refs": [
+        "IFCLNG",
+        "NFPA59A",
+        "IOGP"
+      ],
+      "partners": "Commissioning, Process, E&I, O&M",
+      "example": "Ví dụ: EPC đề nghị bypass alarm để thử thiết bị nhanh; phải qua MOC/temporary override control và quyết định đúng thẩm quyền.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P3-03",
+      "phase": "P3",
+      "area": "An toàn công nghệ",
+      "title": "Điều phối PSSR trước first gas / startup",
+      "goal": "HSE BQLDA bảo đảm có review đủ thành phần, bằng chứng và quyết định có thẩm quyền trước khi đưa khí vào hệ thống.",
+      "steps": [
+        "Xác định boundary hệ thống và mốc PSSR; ai là owner, commissioning authority và người ký readiness.",
+        "Yêu cầu EPC/O&M cung cấp hồ sơ: mechanical completion, as-built, punch list, commissioning results, ESD/F&G, emergency, operating procedures, training, permits.",
+        "Điều phối PSSR multidisciplinary review, phân loại punch item theo mức độ ảnh hưởng đến an toàn và yêu cầu đóng/cho phép ngoại lệ theo quy trình.",
+        "Kiểm tra phương án first gas, SIMOPS, isolation, permit authority, readiness y tế/ứng cứu và liên lạc với các bên.",
+        "Báo cáo trạng thái Go/No-go đến PM/Commissioning Authority; HSE không tự chứng nhận công nghệ an toàn thay chuyên gia."
+      ],
+      "inputs": [
+        "PSSR checklist",
+        "Commissioning test packs",
+        "Fire and gas evidence",
+        "MOC log",
+        "Permits"
+      ],
+      "outputs": [
+        "PSSR Report",
+        "Open Item Decision Log",
+        "First Gas readiness assurance"
+      ],
+      "accept": [
+        "Safety critical blockers không được phép bỏ qua",
+        "Phân quyền ký rõ",
+        "MOC/permit/response ready"
+      ],
+      "red": [
+        "Tài liệu thiếu ký tên có thẩm quyền",
+        "PSSR chỉ họp qua zoom không site verification",
+        "Bắt đầu nạp khí khi tồn tại ESD critical"
+      ],
+      "refs": [
+        "IFCLNG",
+        "NFPA59A",
+        "PCCC",
+        "ND105",
+        "Q19",
+        "ND347"
+      ],
+      "partners": "Commissioning Authority, EPC, Operations, Process, Fire",
+      "example": "Ví dụ: 3 điểm punch list cấp độ an toàn vẫn mở; yêu cầu quyết định No-go hoặc xử lý theo quy trình chấp nhận rủi ro được phê duyệt.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P3-04",
+      "phase": "P3",
+      "area": "Ứng cứu",
+      "title": "Kiểm chứng phương án ứng cứu LNG và phối hợp đa bên",
+      "goal": "Ứng cứu LNG đòi hỏi đồng bộ giữa hệ thống công nghệ, đội cứu hỏa, O&M, EPC, cảng và lực lượng bên ngoài khi áp dụng.",
+      "steps": [
+        "Xây danh mục kịch bản trong ERP: rò rỉ LNG/khí, hỏa hoạn, tổn thương lạnh sâu, thiếu oxy, mất điện, sự cố phương tiện biển nếu liên quan.",
+        "Phân vai Incident Commander, command post, notification, isolation, muster, medical và mutual aid.",
+        "Đánh giá thiết bị phát hiện/cảnh báo, phương tiện cứu nạn, hệ thống thông tin, lối tiếp cận, nguồn nước/chất chữa cháy theo thiết kế.",
+        "Thực hiện tabletop và diễn tập thực địa theo rủi ro; ghi thời gian phản ứng, lỗi interface, CAPA và diễn tập lại khi cần.",
+        "Xác minh readiness trước first gas và chuyển giao các kế hoạch cho O&M."
+      ],
+      "inputs": [
+        "LNG MAH register",
+        "ERP",
+        "Contact matrix",
+        "Design fire philosophy"
+      ],
+      "outputs": [
+        "Emergency drill report",
+        "Mutual aid interface plan",
+        "Readiness action list"
+      ],
+      "accept": [
+        "Kịch bản phù hợp công nghệ thực tế",
+        "Các bên biết vai trò",
+        "Khuyết điểm diễn tập được khắc phục"
+      ],
+      "red": [
+        "Chưa xác định ai chỉ huy khi cả EPC/O&M có mặt",
+        "Muster point trong vùng rủi ro",
+        "Hệ thống liên lạc không hoạt động"
+      ],
+      "refs": [
+        "PCCC",
+        "ND105",
+        "IFCLNG",
+        "IFCGEN",
+        "Q19",
+        "TC8613",
+        "ND347"
+      ],
+      "partners": "Emergency response, O&M, EPC, Fire, Authorities as applicable",
+      "example": "Ví dụ: Diễn tập giả định rò rỉ LNG: anh đánh giá readiness và khả năng phối hợp, không tự chọn chiến thuật chữa cháy thay chuyên gia.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P3-05",
+      "phase": "P3",
+      "area": "An toàn công nghệ",
+      "title": "Quản lý SIMOPS xây lắp – chạy thử – vận hành tạm",
+      "goal": "Ở commissioning, một hệ thống có thể chứa năng lượng trong khi công trường bên cạnh vẫn thi công; trách nhiệm vùng giao diện phải rõ.",
+      "steps": [
+        "Vẽ area status và system energization map theo ngày: cold, pressure test, energized, hydrocarbons introduced.",
+        "Cho mỗi vùng xác định PTW authority, permit-to-work color coding, isolation standards, access restrictions, communication.",
+        "Yêu cầu EPC/O&M thống nhất giới hạn các công việc đồng thời và phương án rescue/evacuation.",
+        "Tổ chức daily interface meeting, áp dụng go/no-go cho công việc xung đột; kiểm tra field readiness.",
+        "Cập nhật boundary khi chuyển giao từng system, có biên bản transfer of control."
+      ],
+      "inputs": [
+        "Commissioning schedule",
+        "System handover",
+        "Area maps",
+        "PTW bridge"
+      ],
+      "outputs": [
+        "SIMOPS / Energization plan",
+        "Transfer-of-control log",
+        "Daily permit interface note"
+      ],
+      "accept": [
+        "Không có vùng năng lượng chưa có người kiểm soát",
+        "Cấp PTW duy nhất theo zone",
+        "Bàn giao kiểm soát có dấu vết"
+      ],
+      "red": [
+        "Thợ hàn làm cạnh line vừa nhận khí",
+        "EPC tưởng khu vực vẫn cold",
+        "Không ai sở hữu khóa cô lập"
+      ],
+      "refs": [
+        "IFCLNG",
+        "IOGP",
+        "AT",
+        "Q18",
+        "Q19"
+      ],
+      "partners": "Construction, Commissioning, O&M, EPC A/B",
+      "example": "Ví dụ: Hệ thống ống bắt đầu nạp khí, lân cận còn hot work; chủ đầu tư tổ chức khóa lịch và cập nhật vùng cấm.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P3-06",
+      "phase": "P3",
+      "area": "An toàn công nghệ",
+      "title": "Assurance tiếp nhận tàu LNG và giao nhận đầu tiên (nếu có cảng)",
+      "goal": "Khi chuyển từ hoàn thành xây dựng sang giao nhận LNG, BQLDA HSE phải kiểm chứng các giao diện cảng/kho/tàu đã sẵn sàng, không tự điều hành tàu hoặc ra lệnh vận hành thay operator.",
+      "steps": [
+        "Xác định các pháp nhân/operator chịu trách nhiệm điều động tàu, kho cảng, chuyển tải, hoa tiêu, emergency; xác lập command and communications matrix.",
+        "Yêu cầu bộ phận có năng lực xác minh thử nghiệm hệ thống cần xuất nhập, interlocks, ESD ship-to-shore, detection, isolation, communications, mooring và giới hạn thời tiết.",
+        "Rà soát competency, operating procedures, checklist chuyển tải, ERP, diễn tập, rescue và phương án ứng phó mất điện/sự cố lạnh sâu.",
+        "Lập ship-to-shore readiness meeting đa bên, ghi safety-critical open items; không đóng bằng cách EPC tự cam kết chưa có test evidence.",
+        "Báo cáo Go/No-go cho commissioning/port authority đúng phân quyền; chuyển giao trạng thái vận hành và trách nhiệm sau giao nhận."
+      ],
+      "inputs": [
+        "Transfer procedure",
+        "Marine ERP",
+        "System test pack",
+        "Ship-shore checklist",
+        "Operator readiness"
+      ],
+      "outputs": [
+        "Transfer readiness assurance report",
+        "Safety critical outstanding list",
+        "Interface handover record"
+      ],
+      "accept": [
+        "Hệ thống thử nghiệm có chứng cứ kỹ thuật",
+        "Phân vai tàu–cảng–kho rõ",
+        "Các emergency interface đã diễn tập"
+      ],
+      "red": [
+        "Không thử ESD link",
+        "Bỏ qua giới hạn thời tiết/neo đậu",
+        "Đưa LNG vào bờ khi vùng đồng thời thi công còn thiếu kiểm soát"
+      ],
+      "refs": [
+        "Q19",
+        "TC8612",
+        "TC8613",
+        "IFCLNG",
+        "NFPA59A"
+      ],
+      "partners": "Marine/Port operator, LNG terminal operator, EPC, O&M, Fire, Commissioning",
+      "example": "Ví dụ: Hoàn tất cơ khí cần xuất nhập chưa đồng nghĩa sẵn sàng tiếp nhận LNGC; phải kiểm chứng functional test và phối hợp tàu–bờ.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P4-01",
+      "phase": "P4",
+      "area": "Bàn giao",
+      "title": "HSE Handover Dossier từ EPC sang O&M",
+      "goal": "Nếu chỉ bàn giao công trình mà không bàn giao hàng rào an toàn, rủi ro sẽ chuyển sang vận hành.",
+      "steps": [
+        "Cùng Engineering/Operations định nghĩa HSE handover content: as-built, manuals, safety studies, critical elements, tests, permits, emergency plans.",
+        "Rà soát tồn tại punch list, temporary changes, bypasses, bảo dưỡng, đặc biệt safety-critical items.",
+        "Ghi owner của từng tồn tại, risk controls, deadline, phê duyệt chấp nhận chuyển giao theo authority matrix.",
+        "Kiểm tra đào tạo O&M, emergency readiness, environmental monitoring handover và document control.",
+        "Tổ chức HSE handover review, sign-off theo phân quyền; đóng contract learning và archive bằng chứng."
+      ],
+      "inputs": [
+        "Project close-out plan",
+        "PSSR",
+        "Commissioning records",
+        "Permits",
+        "MOC"
+      ],
+      "outputs": [
+        "HSE handover dossier",
+        "Open item transfer matrix",
+        "Operations readiness confirmation"
+      ],
+      "accept": [
+        "Không có critical item vô chủ",
+        "Bộ phận O&M nhận đầy đủ",
+        "Sign-off có đúng người và rõ rủi ro còn lại"
+      ],
+      "red": [
+        "Không có as-built",
+        "Temporary bypass kéo dài",
+        "Đóng hợp đồng rồi mới phát hiện thiếu giấy phép"
+      ],
+      "refs": [
+        "XD",
+        "ND207",
+        "MT",
+        "PCCC",
+        "IFCLNG",
+        "TT32"
+      ],
+      "partners": "O&M, Engineering, EPC, Legal, PM",
+      "example": "Ví dụ: Biên bản bàn giao ghi thiết bị phát hiện khí chưa hoàn thành test: phải xác định mức độ chấp nhận hoặc giữ gate phù hợp.",
+      "tag": "Thực hành quản trị"
+    },
+    {
+      "id": "P4-02",
+      "phase": "P4",
+      "area": "Lãnh đạo & tổ chức",
+      "title": "HSE close-out, bài học và đóng nghĩa vụ hợp đồng",
+      "goal": "Kết thúc dự án phải bảo đảm bằng chứng tuân thủ và bài học được chuyển thành năng lực tổ chức.",
+      "steps": [
+        "Đối chiếu HSE deliverables trong hợp đồng EPC với hồ sơ nhận, NCR, sự cố, environmental commitments và legal register.",
+        "Lập danh mục outstanding liabilities có người chịu trách nhiệm, cách xử lý, thời hạn, bằng chứng và nguồn lực.",
+        "Tổng kết về hiệu lực critical controls, quản lý giao diện, thầu phụ, biến động thiết kế và readiness.",
+        "Bàn giao tài liệu và bài học cho O&M và bộ phận quản lý dự án; quản lý truy cập/lưu trữ theo yêu cầu.",
+        "Báo cáo PM và lãnh đạo các tồn tại cần tiếp tục theo dõi sau bàn giao; không “green” mọi thứ vì muốn đóng dự án."
+      ],
+      "inputs": [
+        "Contract schedules",
+        "NCR log",
+        "HSE data",
+        "Legal approvals",
+        "Lessons register"
+      ],
+      "outputs": [
+        "HSE final report",
+        "Residual risk register",
+        "Lessons & improvement plan"
+      ],
+      "accept": [
+        "Tất cả còn lại có owner",
+        "Bằng chứng lưu trữ tra cứu được",
+        "Thông tin bảo mật được quản lý"
+      ],
+      "red": [
+        "Mất hồ sơ gốc",
+        "Không bàn giao risk acceptance",
+        "Chỉ học từ LTI mà không học từ barrier failure"
+      ],
+      "refs": [
+        "IOGP",
+        "ND207",
+        "IFCGEN",
+        "ND210"
+      ],
+      "partners": "PM, Contract, O&M, Legal, Information management",
+      "example": "Ví dụ: Lỗi SIMOPS lặp lại trong 2 EPC được chuyển thành yêu cầu HSE mới cho dự án tiếp theo.",
+      "tag": "Thực hành quản trị"
+    }
+  ],
+  "raci": [
+    {
+      "work": "Xác định nghĩa vụ pháp lý dự án",
+      "owner": "A",
+      "hse": "R/C",
+      "legal": "R",
+      "design": "C",
+      "epc": "I",
+      "note": "Chủ thể nghĩa vụ và đơn vị nộp hồ sơ xác lập theo văn bản cụ thể; RACI này chỉ là mẫu."
+    },
+    {
+      "work": "Lập/triển khai ĐTM",
+      "owner": "A",
+      "hse": "C/R",
+      "legal": "R/C",
+      "design": "C",
+      "epc": "I",
+      "note": "Tư vấn chuyên môn có thể là đơn vị thực hiện; chủ đầu tư chịu trách nhiệm pháp lý theo luật."
+    },
+    {
+      "work": "Thiết kế & safety studies HAZOP/QRA",
+      "owner": "A",
+      "hse": "C",
+      "legal": "I",
+      "design": "R",
+      "epc": "R/C",
+      "note": "Người có chuyên môn chịu trách nhiệm tính toán, nghiên cứu và xác nhận kỹ thuật."
+    },
+    {
+      "work": "Employer HSE Requirements",
+      "owner": "A",
+      "hse": "R",
+      "legal": "C",
+      "design": "C",
+      "epc": "I",
+      "note": "Đưa vào gói thầu qua bộ phận hợp đồng/đấu thầu."
+    },
+    {
+      "work": "Project HSE Plan EPC",
+      "owner": "A/C",
+      "hse": "C/R",
+      "legal": "I",
+      "design": "C",
+      "epc": "R",
+      "note": "EPC soạn và quản lý thực thi; chấp thuận theo nghĩa vụ và phân quyền hợp đồng."
+    },
+    {
+      "work": "Biện pháp thi công và JSA của EPC",
+      "owner": "A/C",
+      "hse": "C",
+      "legal": "I",
+      "design": "C",
+      "epc": "R",
+      "note": "EPC phải lập và thực hiện; chủ đầu tư chấp thuận các hồ sơ bắt buộc theo luật/hợp đồng."
+    },
+    {
+      "work": "PTW, an toàn từng ca tại EPC site",
+      "owner": "I/C",
+      "hse": "C",
+      "legal": "I",
+      "design": "C",
+      "epc": "R/A",
+      "note": "PTW authority thực tế xác lập trong bridging, nhất là khu vận hành/chạy thử."
+    },
+    {
+      "work": "Điều phối giao diện hai EPC",
+      "owner": "A",
+      "hse": "R",
+      "legal": "I",
+      "design": "C",
+      "epc": "R/C",
+      "note": "BQLDA điều phối và EPC triển khai biện pháp theo hợp đồng."
+    },
+    {
+      "work": "Kiểm chứng critical controls",
+      "owner": "A",
+      "hse": "R",
+      "legal": "I",
+      "design": "C",
+      "epc": "R",
+      "note": "BQLDA chọn mẫu/giám sát; EPC vẫn chịu trách nhiệm kiểm soát trực tiếp."
+    },
+    {
+      "work": "Ứng cứu ban đầu tại công trường EPC",
+      "owner": "C",
+      "hse": "C/R",
+      "legal": "C",
+      "design": "I",
+      "epc": "R/A",
+      "note": "Tổ chức chỉ huy sự cố phụ thuộc ERP và phạm vi khu vực; cơ quan chức năng thực hiện nhiệm vụ theo luật."
+    },
+    {
+      "work": "PSSR trước nạp khí",
+      "owner": "A",
+      "hse": "C/R",
+      "legal": "C",
+      "design": "R",
+      "epc": "R",
+      "note": "Commissioning/O&M và engineering có vai trò kỹ thuật chính; HSE điều phối sự sẵn sàng."
+    },
+    {
+      "work": "Bàn giao sang O&M",
+      "owner": "A",
+      "hse": "R/C",
+      "legal": "C",
+      "design": "R",
+      "epc": "R",
+      "note": "Sign-off theo authority matrix; không có HSE ký thay tất cả chuyên ngành."
+    }
+  ],
+  "templates": [
+    {
+      "id": "legal",
+      "title": "Legal / Permit Register",
+      "desc": "Ma trận thủ tục, nghĩa vụ, người chịu trách nhiệm và bằng chứng.",
+      "columns": [
+        "ID",
+        "Hạng mục/hoạt động",
+        "Văn bản + điều khoản đã xác minh",
+        "Trigger áp dụng",
+        "Chủ thể có nghĩa vụ",
+        "Owner xử lý",
+        "Cơ quan/đầu mối",
+        "Thời điểm phải có",
+        "Trạng thái",
+        "Link bằng chứng",
+        "Xác minh cuối",
+        "Điểm chưa rõ"
+      ],
+      "row": [
+        "L-001 [MẪU]",
+        "Kho LNG [XÁC NHẬN]",
+        "Luật BVMT; điều khoản chờ xác minh",
+        "Phân loại dự án theo phạm vi thực tế",
+        "Chủ đầu tư [XÁC NHẬN]",
+        "Legal + Environment",
+        "Cơ quan có thẩm quyền [XÁC MINH]",
+        "Trước hoạt động liên quan",
+        "Chờ rà soát",
+        "",
+        "2026-11-23",
+        "Không suy đoán ĐTM/GPMT"
+      ]
+    },
+    {
+      "id": "risk",
+      "title": "Major HSE Risk Register",
+      "desc": "Rủi ro cấp dự án; không thay HAZOP/QRA.",
+      "columns": [
+        "ID",
+        "Giai đoạn",
+        "Top event / nguy cơ",
+        "Nguyên nhân",
+        "Hậu quả",
+        "Controls phòng ngừa",
+        "Controls giảm nhẹ",
+        "Owner",
+        "Bằng chứng hoạt động",
+        "Risk rating theo phương pháp được duyệt",
+        "Tồn tại",
+        "Hạn",
+        "Quyết định"
+      ],
+      "row": [
+        "R-001 [MẪU]",
+        "Thiết kế",
+        "Rò rỉ LNG tại kết nối",
+        "Phần nối không kín",
+        "Hơi khí dễ cháy/lạnh sâu",
+        "Thiết kế và QA/QC",
+        "Detection, isolation, ERP",
+        "Process / Engineering",
+        "Study action tracker",
+        "Chưa đánh giá",
+        "Chờ chuyên gia",
+        "",
+        "Chưa chốt"
+      ]
+    },
+    {
+      "id": "raci",
+      "title": "RACI & Authority Matrix",
+      "desc": "Phân vai ai làm, ai chịu trách nhiệm, ai được ký.",
+      "columns": [
+        "Hoạt động",
+        "PM/Chủ đầu tư A",
+        "HSE BQLDA",
+        "Legal",
+        "Engineering",
+        "EPC",
+        "Approval authority theo văn bản/hợp đồng",
+        "Ghi chú"
+      ],
+      "row": [
+        "Chấp thuận biện pháp thi công [MẪU]",
+        "A",
+        "C/R",
+        "I",
+        "C",
+        "R",
+        "Chủ đầu tư hoặc người được ủy quyền [XÁC MINH]",
+        "Không mặc nhiên là HSE Manager"
+      ]
+    },
+    {
+      "id": "tender",
+      "title": "EPC HSE Requirement Matrix",
+      "desc": "Yêu cầu HSE đưa vào HSMT và đối chiếu hồ sơ dự thầu.",
+      "columns": [
+        "Requirement ID",
+        "Nhóm rủi ro",
+        "Yêu cầu đo được",
+        "Bằng chứng trong bid",
+        "Mức độ",
+        "Bidder response",
+        "Review comment",
+        "Status",
+        "Điều kiện hợp đồng"
+      ],
+      "row": [
+        "HSE-001 [MẪU]",
+        "Critical lifting",
+        "Có năng lực và quy trình kiểm soát lift đặc biệt",
+        "Key CV/plan/audit sample",
+        "Mandatory",
+        "Chờ nộp",
+        "",
+        "Open",
+        "Xem theo package scope"
+      ]
+    },
+    {
+      "id": "pre",
+      "title": "Mobilization Readiness Review",
+      "desc": "Quản lý blocker trước khi cho nhà thầu huy động.",
+      "columns": [
+        "ID",
+        "Scope/Work Package",
+        "Gate",
+        "Điều kiện phải đáp ứng",
+        "EPC evidence",
+        "Người review",
+        "Kết quả",
+        "Critical blocker?",
+        "Hành động",
+        "Owner",
+        "Hạn",
+        "Quyết định có thẩm quyền"
+      ],
+      "row": [
+        "M-001 [MẪU]",
+        "Nâng hạ thiết bị",
+        "G3",
+        "Lifting resources được chứng minh",
+        "",
+        "HSE/Construction",
+        "Open",
+        "Có",
+        "",
+        "EPC",
+        "",
+        "No-go cho công việc này"
+      ]
+    },
+    {
+      "id": "ncr",
+      "title": "NCR & CAPA Tracker",
+      "desc": "Từ phát hiện hiện trường đến xác minh khắc phục hiệu lực.",
+      "columns": [
+        "NCR ID",
+        "Ngày",
+        "EPC / Vị trí",
+        "Căn cứ bị vi phạm",
+        "Bằng chứng",
+        "Mức độ",
+        "Correction",
+        "Root cause",
+        "Corrective action",
+        "Responsible",
+        "Due date",
+        "Verification",
+        "Closure status"
+      ],
+      "row": [
+        "NCR-001 [MẪU]",
+        "2026-11-23",
+        "EPC A / Zone 1",
+        "HSE Plan 4.2 [MẪU]",
+        "Ảnh/biên bản giả định",
+        "High",
+        "",
+        "Chưa làm RCA",
+        "",
+        "EPC HSE",
+        "",
+        "Chưa kiểm chứng",
+        "Open"
+      ]
+    },
+    {
+      "id": "simops",
+      "title": "SIMOPS / Interface Log",
+      "desc": "Theo dõi các hoạt động giao diện đa EPC hoặc EPC–O&M.",
+      "columns": [
+        "Interface ID",
+        "Khu vực",
+        "Hoạt động A",
+        "Hoạt động B",
+        "Tương tác nguy hiểm",
+        "Điều phối",
+        "Controls/Segregation",
+        "Permit Authority",
+        "Owner",
+        "Ngày/ca",
+        "Kiểm chứng",
+        "Trạng thái"
+      ],
+      "row": [
+        "S-001 [MẪU]",
+        "Đường chung",
+        "Nâng thiết bị",
+        "Vận chuyển ống",
+        "Crane swing/traffic",
+        "Họp EPC A/B",
+        "Tách lịch + đường",
+        "Cần chốt",
+        "Construction/PMU",
+        "",
+        "",
+        "Open"
+      ]
+    },
+    {
+      "id": "weekly",
+      "title": "Weekly HSE Assurance Report",
+      "desc": "Mẫu báo cáo dành cho Giám đốc dự án ra quyết định.",
+      "columns": [
+        "Tuần",
+        "Work package",
+        "Critical risk / decision needed",
+        "Leading indicator evidence",
+        "Overdue critical action",
+        "Legal milestone",
+        "Owner",
+        "Decision needed",
+        "Due",
+        "Status"
+      ],
+      "row": [
+        "W-001 [MẪU]",
+        "EPC A",
+        "Nền kê cẩu chưa đạt",
+        "Field verification 2/3 controls",
+        "1",
+        "Không áp dụng",
+        "Construction Manager",
+        "Dừng lift tới khi chứng minh bearing",
+        "",
+        "Open"
+      ]
+    },
+    {
+      "id": "pssr",
+      "title": "PSSR / First Gas Readiness",
+      "desc": "Danh mục điều kiện kiểm chứng đa chuyên môn trước startup.",
+      "columns": [
+        "System",
+        "Yêu cầu/Barrier",
+        "Bằng chứng thử nghiệm",
+        "Safety-critical?",
+        "Technical reviewer",
+        "HSE assurance",
+        "MOC/Punch ID",
+        "Condition",
+        "Approval authority",
+        "Go/No-go"
+      ],
+      "row": [
+        "Sys-01 [MẪU]",
+        "ESD functional test",
+        "",
+        "Có",
+        "Process/E&I",
+        "Chưa xác minh",
+        "Punch-007",
+        "Open",
+        "Commissioning Authority [XÁC MINH]",
+        "No-go"
+      ]
+    },
+    {
+      "id": "handover",
+      "title": "HSE Handover Dossier Index",
+      "desc": "Chuyển giao không bỏ sót nghĩa vụ và hàng rào an toàn.",
+      "columns": [
+        "ID",
+        "Hồ sơ hoặc barrier",
+        "Nguồn",
+        "O&M receiver",
+        "Bản/phân loại",
+        "Bằng chứng",
+        "Outstanding",
+        "Risk control",
+        "Owner",
+        "Due",
+        "Sign-off"
+      ],
+      "row": [
+        "H-001 [MẪU]",
+        "Fire & Gas test pack",
+        "EPC",
+        "",
+        "As-built",
+        "",
+        "Open",
+        "",
+        "Commissioning",
+        "",
+        ""
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "S1",
+      "title": "ĐTM chưa hoàn tất nhưng muốn san lấp",
+      "phase": "P0",
+      "story": "PM muốn bắt đầu một gói san lấp ngoài hiện trường ngay tuần tới để giữ tiến độ; pháp lý và phạm vi ĐTM/điều kiện khởi công chưa được xác minh.",
+      "choices": [
+        "Gật đầu vì đây là việc chuẩn bị, không cần xem pháp lý",
+        "Yêu cầu Legal/Environment xác minh điều kiện áp dụng, giữ hoạt động thuộc điều kiện chưa đạt và đề xuất giải pháp tiến độ phù hợp",
+        "Chỉ nhắc EPC ký cam kết HSE là đủ"
+      ],
+      "correct": 1,
+      "explain": "Không tự suy luận một hoạt động đã đủ điều kiện chỉ từ tên gói thầu. Phải xác định các thủ tục và điều kiện pháp lý cụ thể trước khi triển khai; đồng thời hỗ trợ PM tìm phương án hợp pháp.",
+      "refs": [
+        "MT",
+        "ND08",
+        "ND48",
+        "XD"
+      ]
+    },
+    {
+      "id": "S2",
+      "title": "Hội đồng hỏi anh có “phê duyệt QRA” được không?",
+      "phase": "P1",
+      "story": "Một tư vấn gửi QRA cho dự án và đề nghị HSE Manager BQLDA ký “approved” vào kết luận rủi ro kỹ thuật.",
+      "choices": [
+        "Ký ngay vì HSE là bộ phận an toàn",
+        "Không ký gì; từ chối mọi trách nhiệm HSE",
+        "Xác định thẩm quyền và năng lực, yêu cầu chuyên gia/engineering review kỹ thuật; HSE xem xét quản trị quy trình và đóng action"
+      ],
+      "correct": 2,
+      "explain": "HSE chủ đầu tư không mặc nhiên có năng lực/phân quyền phê duyệt tính toán QRA. Vai trò là bảo đảm có review đúng người, action tracking và quyết định có thẩm quyền.",
+      "refs": [
+        "IFCLNG",
+        "NFPA59A"
+      ]
+    },
+    {
+      "id": "S3",
+      "title": "EPC gửi HSE Plan 150 trang và xin huy động 500 người",
+      "phase": "P2",
+      "story": "Kế hoạch có đầy đủ tiêu đề, nhưng chưa chứng minh cứu hộ trên cao, phương án giao thông và nhân sự trực tiếp.",
+      "choices": [
+        "Chấp nhận vì EPC có ISO 45001",
+        "Review theo yêu cầu hợp đồng, làm readiness review, đóng blocker trước khi cho phần việc liên quan triển khai",
+        "Từ chối toàn bộ dự án mà không ghi nhận tồn tại"
+      ],
+      "correct": 1,
+      "explain": "Tài liệu đủ trang không đồng nghĩa đủ điều kiện. Chỉ quyết định theo phạm vi, evidence, gate và đúng thẩm quyền.",
+      "refs": [
+        "ND207",
+        "Q18",
+        "IOGP"
+      ]
+    },
+    {
+      "id": "S4",
+      "title": "Hai EPC đều có PTW nhưng công việc xung đột",
+      "phase": "P2",
+      "story": "EPC A nâng thiết bị qua đường chung. EPC B vận chuyển ống qua đường đó. Hai PTW đều hợp lệ trong hệ thống riêng.",
+      "choices": [
+        "Để hai EPC tự xử, HSE chủ đầu tư không can thiệp",
+        "Cho EPC nhanh hơn làm trước mà không cập nhật giấy phép",
+        "Tổ chức SIMOPS review, phân vùng/điều chỉnh lịch, xác định one controlling authority và kiểm chứng thực địa"
+      ],
+      "correct": 2,
+      "explain": "Điểm giao diện không được có khoảng trống trách nhiệm. HSE BQLDA điều phối; EPC phải điều chỉnh thực thi theo kế hoạch được thống nhất.",
+      "refs": [
+        "ND207",
+        "IOGP",
+        "Q18"
+      ]
+    },
+    {
+      "id": "S5",
+      "title": "First gas nhưng ESD chưa hoàn thành test",
+      "phase": "P3",
+      "story": "Commissioning báo 99% hoàn thành; một ESD chức năng quan trọng chưa có test evidence. PM muốn nạp khí để giữ mốc.",
+      "choices": [
+        "Cho phép vì chỉ còn 1%",
+        "Yêu cầu phân loại safety critical item, review kỹ thuật và PSSR, báo cáo no-go/điều kiện quyết định theo phân quyền",
+        "Chỉ yêu cầu thêm PPE cho đội vận hành"
+      ],
+      "correct": 1,
+      "explain": "Safety critical barrier không thể suy ra đạt từ tỷ lệ tiến độ. HSE bảo đảm có đánh giá kỹ thuật, chứng cứ, quyền quyết định và điều kiện go/no-go.",
+      "refs": [
+        "IFCLNG",
+        "NFPA59A",
+        "PCCC"
+      ]
+    },
+    {
+      "id": "S6",
+      "title": "Tai nạn nặng tại nhà thầu phụ",
+      "phase": "P2",
+      "story": "Có người bị thương nặng, thông tin ban đầu trái chiều, nhà thầu đề nghị chỉ báo cáo nội bộ và nhanh chóng làm lại.",
+      "choices": [
+        "Cho phép làm lại ngay để tránh trễ tiến độ",
+        "Ưu tiên cứu nạn, kiểm soát hiện trường, xác minh nghĩa vụ pháp lý, phối hợp điều tra đúng thẩm quyền và đánh giá risk trước resume",
+        "Tự đăng thông tin sự cố lên mạng xã hội"
+      ],
+      "correct": 1,
+      "explain": "Phân biệt ứng cứu, báo cáo theo luật, điều tra nội bộ và resume. HSE owner kiểm soát trách nhiệm toàn dự án nhưng không thay cơ quan có thẩm quyền.",
+      "refs": [
+        "AT",
+        "ND207",
+        "Q18"
+      ]
+    },
+    {
+      "id": "S7",
+      "title": "BQLDA chỉ có 3 HSE, EPC có 30 HSE",
+      "phase": "P2",
+      "story": "PM hỏi làm sao kiểm soát 2.000 công nhân khi đội chủ đầu tư chỉ có ba người.",
+      "choices": [
+        "Yêu cầu tuyển đủ người để đi giám sát tất cả",
+        "Dựa vào hệ thống EPC, kiểm chứng dựa trên rủi ro, critical controls, audit và reporting/escalation rõ ràng",
+        "Giao toàn bộ cho EPC, không cần đội BQLDA"
+      ],
+      "correct": 1,
+      "explain": "Nguồn lực BQLDA tập trung vào assurance, interfaces và vấn đề lãnh đạo phải quyết định; EPC thực thi hệ thống của mình.",
+      "refs": [
+        "ND207",
+        "IOGP"
+      ]
+    },
+    {
+      "id": "S8",
+      "title": "Dữ liệu KPI đẹp nhưng kiểm tra thấy lỗi lặp lại",
+      "phase": "P2",
+      "story": "EPC báo 2 triệu giờ không LTI, nhưng ba lần kiểm tra phát hiện PTW không phản ánh hiện trường.",
+      "choices": [
+        "Dựa vào 2 triệu giờ để kết luận tốt",
+        "Phân tích leading indicators, yêu cầu RCA và corrective actions kiểm chứng được",
+        "Chỉ tăng số buổi toolbox talk"
+      ],
+      "correct": 1,
+      "explain": "Lagging KPI không thay thế kiểm chứng barrier. Lỗi lặp lại là chỉ dấu vấn đề hệ thống.",
+      "refs": [
+        "IOGP",
+        "IFCGEN",
+        "ND207"
+      ]
+    }
+  ],
+  "interview": [
+    {
+      "q": "Anh từng làm LILAMA khi dự án đã thi công, có xây được HSE từ đầu không?",
+      "key": [
+        "Không tự nhận đã chủ trì FEED nếu chưa làm",
+        "Chuyển kinh nghiệm thực thi thành early controls",
+        "Có logic scope → risk → legal → employer requirements → assurance"
+      ],
+      "hint": "Tôi có kinh nghiệm ở giai đoạn thi công. Khi nhận dự án sớm, tôi sẽ bắt đầu bằng phạm vi và rủi ro, sau đó đề xuất hệ thống và bộ yêu cầu EPC; phần phân tích công nghệ cần chuyên gia."
+    },
+    {
+      "q": "Anh sẽ làm gì trong 30 ngày đầu khi chưa có EPC?",
+      "key": [
+        "Xác minh phạm vi/role/authority",
+        "Legal & risk registers; EIA/PCCC/design roadmaps",
+        "Báo cáo gap và đề xuất PM quyết định"
+      ],
+      "hint": "Sản phẩm cuối tháng: Project HSE baseline, Legal Register, Project Risk Register, Employer HSE requirement outline và nguồn lực."
+    },
+    {
+      "q": "Vì sao chủ đầu tư cần HSE trong khi EPC có 30 HSE?",
+      "key": [
+        "EPC thực thi, owner giám sát và điều phối",
+        "Critical barrier assurance & interface",
+        "BQLDA hỗ trợ quyết định ở cấp dự án"
+      ],
+      "hint": "Tôi không làm thay việc đi kiểm tra mỗi ca của EPC; tôi kiểm chứng hệ thống EPC và quản lý các điểm giao diện mà một EPC không tự giải quyết."
+    },
+    {
+      "q": "Anh có thể tự ký phê duyệt HAZOP hoặc QRA?",
+      "key": [
+        "Phân biệt review quản trị và thẩm định kỹ thuật",
+        "Technical authority đủ năng lực",
+        "Phân quyền ký / giữ gate"
+      ],
+      "hint": "Tôi tổ chức, theo dõi và yêu cầu đóng action; kết luận kỹ thuật chuyên sâu thuộc người có năng lực, được giao đúng thẩm quyền."
+    },
+    {
+      "q": "Khi tiến độ xung đột với an toàn?",
+      "key": [
+        "Nhận diện unacceptable risk",
+        "Dừng công việc nguy hiểm theo thẩm quyền",
+        "Đề xuất giải pháp khác và re-validate"
+      ],
+      "hint": "Dừng đúng phần việc có nguy cơ, xử lý nguyên nhân, phối hợp re-sequencing và chỉ tiếp tục khi controls đạt."
+    },
+    {
+      "q": "Bộ KPI nào dùng để báo cáo lãnh đạo?",
+      "key": [
+        "Critical controls verified",
+        "Overdue safety-critical actions",
+        "EPC HSE capability/performance + lagging"
+      ],
+      "hint": "Tôi dùng leading indicators để kiểm soát trước sự cố, không dùng số giờ an toàn như chỉ số duy nhất."
+    },
+    {
+      "q": "Từ kinh nghiệm SHEQ ở NORTALIC, anh chuyển giao gì?",
+      "key": [
+        "Ma trận tuân thủ",
+        "Phối hợp EIA/PCCC qua các bộ phận",
+        "Quản trị thay đổi và evidence"
+      ],
+      "hint": "Tôi có thể vận dụng kỹ năng quản trị tuân thủ và báo cáo; chi tiết phạm vi từng thủ tục tôi sẽ căn cứ ủy quyền và thiết kế thực tế."
+    },
+    {
+      "q": "Đã 7 triệu giờ an toàn là đóng góp của riêng anh?",
+      "key": [
+        "Đúng phạm vi tập thể",
+        "Vai trò cá nhân thực tế",
+        "Bằng chứng tham gia"
+      ],
+      "hint": "Đó là thành quả của tập thể dự án. Tôi sẽ làm rõ phần công việc tôi trực tiếp quản lý và các biện pháp tôi đã triển khai."
+    },
+    {
+      "q": "LNG có rủi ro nào khác lọc hóa dầu?",
+      "key": [
+        "Cryogenic/flammable gas + interface marine",
+        "Process safety vs occupational safety",
+        "HAZID/HAZOP/QRA/PSSR phối hợp chuyên gia"
+      ],
+      "hint": "Không đánh đồng các ngành; tôi có nền tảng quản trị dự án công nghiệp nhưng sẽ làm việc với chuyên gia LNG cho risk studies."
+    },
+    {
+      "q": "Nếu Trung Nam chưa rõ đơn vị chủ đầu tư pháp lý?",
+      "key": [
+        "Hỏi pháp nhân dự án và contract mode",
+        "Không khẳng định thông tin chưa công bố",
+        "Làm rõ người phỏng vấn kỳ vọng và unit"
+      ],
+      "hint": "Xin làm rõ pháp nhân quản lý dự án, mô hình EPC, giai đoạn triển khai để tôi đề xuất đúng cấu trúc HSE."
+    }
+  ],
+  "glossary": [
+    [
+      "PMU/BQLDA",
+      "Project Management Unit",
+      "Ban Quản lý dự án phía chủ đầu tư, tùy cơ cấu được thành lập."
+    ],
+    [
+      "EPC",
+      "Engineering – Procurement – Construction",
+      "Tổng thầu thiết kế, mua sắm và xây dựng theo phạm vi hợp đồng."
+    ],
+    [
+      "FEED",
+      "Front-End Engineering Design",
+      "Thiết kế cơ sở/thiết kế tiền triển khai tùy cấu trúc dự án, dùng để định hình phạm vi, công nghệ và chi phí."
+    ],
+    [
+      "Employer’s Requirements",
+      "Owner technical/HSE requirements",
+      "Yêu cầu của chủ đầu tư trong HSMT/hợp đồng; không phải quy phạm pháp luật tự thân."
+    ],
+    [
+      "EIA/ĐTM",
+      "Environmental Impact Assessment",
+      "Đánh giá tác động môi trường theo đối tượng, thủ tục và thẩm quyền áp dụng."
+    ],
+    [
+      "GPMT",
+      "Giấy phép môi trường",
+      "Giấy phép môi trường đối với đối tượng áp dụng, khác với thủ tục ĐTM."
+    ],
+    [
+      "PCCC/CNCH",
+      "Fire prevention, firefighting / rescue",
+      "Phòng cháy chữa cháy và cứu nạn cứu hộ."
+    ],
+    [
+      "HSE-MS",
+      "Health, Safety & Environment Management System",
+      "Hệ thống quản lý an toàn, sức khỏe và môi trường."
+    ],
+    [
+      "RACI",
+      "Responsible / Accountable / Consulted / Informed",
+      "Ma trận ai trực tiếp làm, ai chịu trách nhiệm cuối, ai được tham vấn, ai được thông báo."
+    ],
+    [
+      "Authority Matrix",
+      "Delegation of Authority",
+      "Ma trận phân quyền phê duyệt/chấp thuận/ký; tách rõ với người quản lý HSE."
+    ],
+    [
+      "HSMT",
+      "Hồ sơ mời thầu",
+      "Hồ sơ phát hành cho nhà thầu tham dự theo gói."
+    ],
+    [
+      "HAZID",
+      "Hazard Identification",
+      "Nghiên cứu nhận diện mối nguy có cấu trúc."
+    ],
+    [
+      "HAZOP",
+      "Hazard and Operability Study",
+      "Đánh giá sai lệch vận hành so với ý định thiết kế; do đội chuyên môn thực hiện."
+    ],
+    [
+      "QRA",
+      "Quantitative Risk Assessment",
+      "Đánh giá định lượng rủi ro; cần chuyên gia, dữ liệu và phương pháp phù hợp."
+    ],
+    [
+      "MAH",
+      "Major Accident Hazard",
+      "Mối nguy gây sự cố lớn, không đồng nghĩa tai nạn lao động thường gặp."
+    ],
+    [
+      "Barrier",
+      "Risk-control barrier",
+      "Hàng rào phòng ngừa hoặc giảm nhẹ sự cố; phải có bằng chứng hiệu lực."
+    ],
+    [
+      "Bow-tie",
+      "Barrier-based risk analysis",
+      "Trình bày nguyên nhân–sự cố trung tâm–hậu quả và các hàng rào hai phía."
+    ],
+    [
+      "PTW",
+      "Permit to Work",
+      "Hệ thống giấy phép làm việc theo loại công việc, vùng và thẩm quyền."
+    ],
+    [
+      "JSA/JHA",
+      "Job Safety Analysis / Job Hazard Analysis",
+      "Phân tích an toàn công việc, gắn với thao tác/địa điểm cụ thể."
+    ],
+    [
+      "SIMOPS",
+      "Simultaneous Operations",
+      "Quản lý các hoạt động đồng thời có rủi ro tương tác."
+    ],
+    [
+      "NCR",
+      "Non-conformance Report",
+      "Biên bản điểm không phù hợp theo yêu cầu/căn cứ cụ thể."
+    ],
+    [
+      "CAPA",
+      "Corrective and Preventive Action",
+      "Hành động khắc phục và phòng ngừa, kiểm chứng hiệu lực."
+    ],
+    [
+      "MOC",
+      "Management of Change",
+      "Quản lý thay đổi đối với thiết kế/quy trình/thiết bị/điều kiện."
+    ],
+    [
+      "PSM",
+      "Process Safety Management",
+      "Quản trị an toàn công nghệ/kiểm soát sự cố lớn."
+    ],
+    [
+      "PSSR",
+      "Pre-Startup Safety Review",
+      "Đánh giá sẵn sàng an toàn trước khi khởi động."
+    ],
+    [
+      "First gas",
+      "First introduction of gas",
+      "Mốc đưa khí vào hệ thống, cần readiness và phân quyền rõ."
+    ],
+    [
+      "O&M",
+      "Operation & Maintenance",
+      "Đơn vị vận hành và bảo dưỡng nhận bàn giao sau chạy thử."
+    ],
+    [
+      "SCE",
+      "Safety Critical Element",
+      "Thiết bị, chức năng hoặc hàng rào quan trọng đối với an toàn."
+    ],
+    [
+      "Hold point",
+      "Điểm dừng kiểm tra",
+      "Mốc không chuyển bước nếu chưa có xác nhận/chấp thuận theo hợp đồng và phân quyền."
+    ],
+    [
+      "Go/No-go",
+      "Quyết định cho phép / chưa cho phép",
+      "Quyết định quản trị tại các mốc sẵn sàng, không thay thế giấy phép pháp lý."
+    ]
+  ]
+}
